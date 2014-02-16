@@ -24,3 +24,5 @@
 .\UV4Build\main.o: .\ComplexDrivers\CD_Delay.h
 .\UV4Build\main.o: .\ComplexDrivers\CD_AnalogIn.h
 .\UV4Build\main.o: .\ComplexDrivers\CD_AnalogOut.h
+.\UV4Build\main.o: .\ECUAbstraction\ECUA_HMI.h
+.\UV4Build\main.o: .\ECUAbstraction\ECUA_SerialComm.h
