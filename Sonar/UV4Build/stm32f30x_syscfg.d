@@ -1,0 +1,9 @@
+.\UV4Build\stm32f30x_syscfg.o: ./MicrocontrollerAbsLayer/stm32f30x_syscfg.c
+.\UV4Build\stm32f30x_syscfg.o: ./MicrocontrollerAbsLayer/stm32f30x_syscfg.h
+.\UV4Build\stm32f30x_syscfg.o: C:\Keil\ARM\Inc\ST\STM32F30x\stm32f30x.h
+.\UV4Build\stm32f30x_syscfg.o: ./MicrocontrollerAbsLayer/CMSIS/Core/core_cm4.h
+.\UV4Build\stm32f30x_syscfg.o: C:\Keil\ARM\ARMCC\bin\..\include\stdint.h
+.\UV4Build\stm32f30x_syscfg.o: ./MicrocontrollerAbsLayer/CMSIS/Core/core_cmInstr.h
+.\UV4Build\stm32f30x_syscfg.o: ./MicrocontrollerAbsLayer/CMSIS/Core/core_cmFunc.h
+.\UV4Build\stm32f30x_syscfg.o: ./MicrocontrollerAbsLayer/CMSIS/Core/core_cm4_simd.h
+.\UV4Build\stm32f30x_syscfg.o: C:\Keil\ARM\Inc\ST\STM32F30x\system_stm32f30x.h

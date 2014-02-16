@@ -1,0 +1,5 @@
+-c --cpu Cortex-M4.fp -D__EVAL -g -O0 --apcs=interwork -IApplication -I./InterruptDispatcher -I./MicrocontrollerAbsLayer -I./MicrocontrollerAbsLayer/Startup -I./MicrocontrollerAbsLayer/CMSIS/Core -I./ComplexDrivers 
+-I C:\Keil\ARM\RV31\INC 
+-I C:\Keil\ARM\CMSIS\Include 
+-I C:\Keil\ARM\Inc\ST\STM32F30x 
+-o ".\UV4Build\main.o" --omf_browse ".\UV4Build\main.crf" --depend ".\UV4Build\main.d" "./ApplicationLayer/main.c"
