@@ -1,30 +1,11 @@
 /**
   ******************************************************************************
-  * @file    FPU_Example/stm32f30x_it.c 
-  * @author  MCD Application Team
-  * @version V1.1.0
-  * @date    20-September-2012
-  * @brief   Main Interrupt Service Routines.
+  * @file   ./stm32f30x_it.c
+  * @author  S&I Application Team
+  * @version V1.0.0
+  * @date    15-February-2014  * @brief   Main Interrupt Service Routines.
   *          This file provides template for all exceptions handler and 
   *          peripherals interrupt service routine.
-  ******************************************************************************
-  * @attention
-  *
-  * <h2><center>&copy; COPYRIGHT 2012 STMicroelectronics</center></h2>
-  *
-  * Licensed under MCD-ST Liberty SW License Agreement V2, (the "License");
-  * You may not use this file except in compliance with the License.
-  * You may obtain a copy of the License at:
-  *
-  *        http://www.st.com/software_license_agreement_liberty_v2
-  *
-  * Unless required by applicable law or agreed to in writing, software 
-  * distributed under the License is distributed on an "AS IS" BASIS, 
-  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  * See the License for the specific language governing permissions and
-  * limitations under the License.
-  *
-  ******************************************************************************
   */
 
 /* Includes ------------------------------------------------------------------*/
@@ -33,11 +14,17 @@
 #include "CD_Delay.h"
 
 
-/** @addtogroup STM32F3_Discovery_Peripheral_Examples
+/** \defgroup Interrupt_Dispatcher
+ *  \brief Brief description of Interrupt Dispatcher
+ *  \details  Long description of Interrupt Dispatcher
+ */
+
+
+/** @addtogroup Sonar_Application
   * @{
   */
 
-/** @addtogroup FPU_Example
+/** @addtogroup Interrupt_Dispatcher
   * @{
   */
 
@@ -165,7 +152,7 @@ void EXTI0_IRQHandler(void)
 {    
 }
 
-static volatile uint32 alma = 0;
+//static volatile uint32 alma = 0;
 
 void DMA2_Channel3_IRQHandler(void){
 	
@@ -176,11 +163,6 @@ void DMA2_Channel3_IRQHandler(void){
 	DMA2->IFCR = DMA_IFCR_CGIF3;
 }
 
-/**
-  * @brief  This function handles PPP interrupt request.
-  * @param  None
-  * @retval None
-  */
 
 
 /**
@@ -192,4 +174,3 @@ void DMA2_Channel3_IRQHandler(void){
   */ 
 
 
-/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
