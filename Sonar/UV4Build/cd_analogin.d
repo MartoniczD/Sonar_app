@@ -12,6 +12,7 @@
 .\UV4Build\cd_analogin.o: .\MicrocontrollerAbsLayer\stm32f30x_dac.h
 .\UV4Build\cd_analogin.o: .\MicrocontrollerAbsLayer\stm32f30x_dma.h
 .\UV4Build\cd_analogin.o: .\MicrocontrollerAbsLayer\stm32f30x_exti.h
+.\UV4Build\cd_analogin.o: .\MicrocontrollerAbsLayer\stm32f30x_flash.h
 .\UV4Build\cd_analogin.o: .\MicrocontrollerAbsLayer\stm32f30x_gpio.h
 .\UV4Build\cd_analogin.o: .\MicrocontrollerAbsLayer\stm32f30x_syscfg.h
 .\UV4Build\cd_analogin.o: .\MicrocontrollerAbsLayer\stm32f30x_i2c.h

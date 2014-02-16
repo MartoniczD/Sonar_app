@@ -41,11 +41,18 @@
   */
 
 
+/* General Includes */
 #include "DRV_DrvList.h"
 #include "OS_Types.h"
+
+/* CD Level Includes */
 #include "CD_Delay.h"
 #include "CD_AnalogIn.h"
 #include "CD_AnalogOut.h"
+#include "CD_UniqueID.h"
+#include "CD_NVM.h"
+
+/* ECU Level Includes */
 #include "ECUA_HMI.h"
 #include "ECUA_SerialComm.h"
 
@@ -66,7 +73,11 @@
 /* Private function prototypes -----------------------------------------------*/
 /* Private functions ---------------------------------------------------------*/
 
+CPUID alma __attribute__((at(UIDADDRBASE)));
+static uint8 cica = 12;
+
 int main(void){
+
 
 	
   /* Setup SysTick Timer for 1 µsec interrupts  */
@@ -74,12 +85,19 @@ int main(void){
     while (1);
   }
 
+  //uid1 = *(int*)0x1FFF7FAC;
+  //uid2 = UNIQUEID.REG.UID2;
+
   /* Complex Driver Level Init */
   CD_AnalogOut_Init();
 
   /* ECU Level Init */
   ECUA_HMI_Init();
   ECUA_Serial_Init();
+
+ //cica = CDNVM_Memory.ip1;
+
+  CDNVM_WriteData8(0x12,(uint32*)&CDNVM_Memory.ip1);
 
   ECUA_Serial_Write("\r\nBOOTED!");
 
@@ -98,7 +116,7 @@ int main(void){
 		ECUA_HMI_LedSwitch(LED_On);
 		Delay_us(99999);
 		ECUA_HMI_LedSwitch(LED_Off);
-		
+		//ECUA_Serial_Write("\r\nBOOTED!");
 
   }
 

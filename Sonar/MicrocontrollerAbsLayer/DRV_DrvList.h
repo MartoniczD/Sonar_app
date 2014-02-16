@@ -11,7 +11,7 @@
 // #include "stm32f30x_dbgmcu.h"
 #include "stm32f30x_dma.h"
 #include "stm32f30x_exti.h"
-// #include "stm32f30x_flash.h"
+#include "stm32f30x_flash.h"
 #include "stm32f30x_gpio.h"
 #include "stm32f30x_syscfg.h"
 #include "stm32f30x_i2c.h"

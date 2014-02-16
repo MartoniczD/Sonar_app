@@ -301,8 +301,8 @@
               </OCR_RVCT4>
               <OCR_RVCT5>
                 <Type>1</Type>
-                <StartAddress>0x0</StartAddress>
-                <Size>0x0</Size>
+                <StartAddress>0x1fff7fac</StartAddress>
+                <Size>0x20</Size>
               </OCR_RVCT5>
               <OCR_RVCT6>
                 <Type>0</Type>
@@ -370,7 +370,7 @@
             </VariousControls>
           </Aads>
           <LDads>
-            <umfTarg>0</umfTarg>
+            <umfTarg>1</umfTarg>
             <Ropi>0</Ropi>
             <Rwpi>0</Rwpi>
             <noStLib>0</noStLib>
@@ -430,6 +430,16 @@
               <FileName>CD_AnalogOut.c</FileName>
               <FileType>1</FileType>
               <FilePath>./ComplexDrivers/CD_AnalogOut.c</FilePath>
+            </File>
+            <File>
+              <FileName>CD_UniqueID.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\ComplexDrivers\CD_UniqueID.c</FilePath>
+            </File>
+            <File>
+              <FileName>CD_NVM.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\ComplexDrivers\CD_NVM.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -510,6 +520,11 @@
               <FileName>stm32f30x_usart.c</FileName>
               <FileType>1</FileType>
               <FilePath>./MicrocontrollerAbsLayer/stm32f30x_usart.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f30x_flash.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\MicrocontrollerAbsLayer\stm32f30x_flash.c</FilePath>
             </File>
           </Files>
         </Group>

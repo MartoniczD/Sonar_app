@@ -11,6 +11,7 @@
 .\UV4Build\main.o: .\MicrocontrollerAbsLayer\stm32f30x_dac.h
 .\UV4Build\main.o: .\MicrocontrollerAbsLayer\stm32f30x_dma.h
 .\UV4Build\main.o: .\MicrocontrollerAbsLayer\stm32f30x_exti.h
+.\UV4Build\main.o: .\MicrocontrollerAbsLayer\stm32f30x_flash.h
 .\UV4Build\main.o: .\MicrocontrollerAbsLayer\stm32f30x_gpio.h
 .\UV4Build\main.o: .\MicrocontrollerAbsLayer\stm32f30x_syscfg.h
 .\UV4Build\main.o: .\MicrocontrollerAbsLayer\stm32f30x_i2c.h
@@ -24,5 +25,7 @@
 .\UV4Build\main.o: .\ComplexDrivers\CD_Delay.h
 .\UV4Build\main.o: .\ComplexDrivers\CD_AnalogIn.h
 .\UV4Build\main.o: .\ComplexDrivers\CD_AnalogOut.h
+.\UV4Build\main.o: .\ComplexDrivers\CD_UniqueID.h
+.\UV4Build\main.o: .\ComplexDrivers\CD_NVM.h
 .\UV4Build\main.o: .\ECUAbstraction\ECUA_HMI.h
 .\UV4Build\main.o: .\ECUAbstraction\ECUA_SerialComm.h
