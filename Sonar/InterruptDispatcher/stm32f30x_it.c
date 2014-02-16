@@ -181,9 +181,7 @@ void DMA2_Channel3_IRQHandler(void){
   * @param  None
   * @retval None
   */
-/*void PPP_IRQHandler(void)
-{
-}*/
+
 
 /**
   * @}

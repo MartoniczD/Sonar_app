@@ -350,7 +350,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>Application;./InterruptDispatcher;./MicrocontrollerAbsLayer;./MicrocontrollerAbsLayer/Startup;./MicrocontrollerAbsLayer/CMSIS/Core;./ComplexDrivers</IncludePath>
+              <IncludePath>ApplicationLayer;.\ComplexDrivers;.\InterruptDispatcher;.\MicrocontrollerAbsLayer;.\Startup;.\MicrocontrollerAbsLayer\CMSIS</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -366,7 +366,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>Application;./InterruptDispatcher;./MicrocontrollerAbsLayer;./MicrocontrollerAbsLayer/Startup;./MicrocontrollerAbsLayer/CMSIS/Core;./ComplexDrivers</IncludePath>
+              <IncludePath>ApplicationLayer</IncludePath>
             </VariousControls>
           </Aads>
           <LDads>
@@ -425,6 +425,11 @@
               <FileName>CD_OPAMP.c</FileName>
               <FileType>1</FileType>
               <FilePath>./ComplexDrivers/CD_OPAMP.c</FilePath>
+            </File>
+            <File>
+              <FileName>CD_AnalogOut.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>./ComplexDrivers/CD_AnalogOut.c</FilePath>
             </File>
           </Files>
         </Group>

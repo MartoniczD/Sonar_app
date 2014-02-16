@@ -1,10 +1,10 @@
 .\UV4Build\stm32f30x_usart.o: ./MicrocontrollerAbsLayer/stm32f30x_usart.c
 .\UV4Build\stm32f30x_usart.o: ./MicrocontrollerAbsLayer/stm32f30x_usart.h
-.\UV4Build\stm32f30x_usart.o: C:\Keil\ARM\Inc\ST\STM32F30x\stm32f30x.h
-.\UV4Build\stm32f30x_usart.o: ./MicrocontrollerAbsLayer/CMSIS/Core/core_cm4.h
+.\UV4Build\stm32f30x_usart.o: .\MicrocontrollerAbsLayer\CMSIS\stm32f30x.h
+.\UV4Build\stm32f30x_usart.o: C:\Keil\ARM\CMSIS\Include\core_cm4.h
 .\UV4Build\stm32f30x_usart.o: C:\Keil\ARM\ARMCC\bin\..\include\stdint.h
-.\UV4Build\stm32f30x_usart.o: ./MicrocontrollerAbsLayer/CMSIS/Core/core_cmInstr.h
-.\UV4Build\stm32f30x_usart.o: ./MicrocontrollerAbsLayer/CMSIS/Core/core_cmFunc.h
-.\UV4Build\stm32f30x_usart.o: ./MicrocontrollerAbsLayer/CMSIS/Core/core_cm4_simd.h
-.\UV4Build\stm32f30x_usart.o: C:\Keil\ARM\Inc\ST\STM32F30x\system_stm32f30x.h
+.\UV4Build\stm32f30x_usart.o: C:\Keil\ARM\CMSIS\Include\core_cmInstr.h
+.\UV4Build\stm32f30x_usart.o: C:\Keil\ARM\CMSIS\Include\core_cmFunc.h
+.\UV4Build\stm32f30x_usart.o: C:\Keil\ARM\CMSIS\Include\core_cm4_simd.h
+.\UV4Build\stm32f30x_usart.o: .\MicrocontrollerAbsLayer\CMSIS\system_stm32f30x.h
 .\UV4Build\stm32f30x_usart.o: ./MicrocontrollerAbsLayer/stm32f30x_rcc.h
