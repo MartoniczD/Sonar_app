@@ -40,7 +40,7 @@
 ### ADS-LD Output File: '.\UV4Build\Sonar.axf'
 ### ADS-LD Command File: '.\UV4Build\Sonar.lnp'
 ### Checking for dirty Components...
-### Creating CmdFile '.\UV4Build\Sonar.lnp', Handle=0x00000404
+### Creating CmdFile '.\UV4Build\Sonar.lnp', Handle=0x0000072C
 ### Writing '.lnp' file
 ### ADS-LD Command file '.\UV4Build\Sonar.lnp' is ready.
 ### ADS-LD: About to start ADS-LD Thread.
