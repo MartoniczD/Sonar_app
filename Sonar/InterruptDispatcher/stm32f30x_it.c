@@ -19,7 +19,6 @@
  *  \details  Long description of Interrupt Dispatcher
  */
 
-
 /** @addtogroup Sonar_Application
   * @{
   */
@@ -163,6 +162,12 @@ void DMA2_Channel3_IRQHandler(void){
 	DMA2->IFCR = DMA_IFCR_CGIF3;
 }
 
+void USART1_IRQHandler(void){
+
+	sint8 ml_Indata_s8 = 0;
+	ml_Indata_s8 = (sint8)USART1->RDR;
+
+}
 
 
 /**

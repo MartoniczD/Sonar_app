@@ -74,15 +74,23 @@ int main(void){
     while (1);
   }
 
-//  CDOPAMP_Init();
+  /* Complex Driver Level Init */
   CD_AnalogOut_Init();
+
+  /* ECU Level Init */
   ECUA_HMI_Init();
   ECUA_Serial_Init();
 
   ECUA_Serial_Write("\r\nBOOTED!");
-  //	setup_adc();
 
-	
+
+  //	setup_adc();
+  //  CDOPAMP_Init();
+	/*DAC_SetChannel2Data(DAC_Align_12b_R , 2570);
+	Delay_us(50);
+	DAC_SetChannel2Data(DAC_Align_12b_R , 0);
+	Delay_us(70);
+	*/
 
   while (1)
   {
@@ -91,11 +99,7 @@ int main(void){
 		Delay_us(99999);
 		ECUA_HMI_LedSwitch(LED_Off);
 		
-		/*DAC_SetChannel2Data(DAC_Align_12b_R , 2570);
-		Delay_us(50);
-		DAC_SetChannel2Data(DAC_Align_12b_R , 0);
-		Delay_us(70);
-		*/
+
   }
 
 }
@@ -108,5 +112,5 @@ int main(void){
   * @}
   */
 
-
+//[EOF]
 
