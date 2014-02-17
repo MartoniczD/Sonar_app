@@ -1,3 +1,3 @@
-.\UV4Build\cd_delay.o: ./ComplexDrivers/CD_Delay.c
-.\UV4Build\cd_delay.o: ./ComplexDrivers/CD_Delay.h
-.\UV4Build\cd_delay.o: ./ComplexDrivers/OS_Types.h
+.\uv4build\cd_delay.o: ./ComplexDrivers/CD_Delay.c
+.\uv4build\cd_delay.o: ./ComplexDrivers/CD_Delay.h
+.\uv4build\cd_delay.o: ./ComplexDrivers/OS_Types.h

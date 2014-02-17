@@ -75,18 +75,17 @@
 
 CPUID alma __attribute__((at(UIDADDRBASE)));
 static uint8 cica = 12;
+static int uid1 = 0;
 
 int main(void){
-
-
 	
   /* Setup SysTick Timer for 1 µsec interrupts  */
   if (SysTick_Config(SystemCoreClock / 1000000)){
     while (1);
   }
 
-  //uid1 = *(int*)0x1FFF7FAC;
-  //uid2 = UNIQUEID.REG.UID2;
+
+  uid1 = UNIQUEID.REG.UID2;
 
   /* Complex Driver Level Init */
   CD_AnalogOut_Init();
@@ -95,10 +94,9 @@ int main(void){
   ECUA_HMI_Init();
   ECUA_Serial_Init();
 
- //cica = CDNVM_Memory.ip1;
-
-  CDNVM_WriteData8(0x12,(uint32*)&CDNVM_Memory.ip1);
-
+  CDNVM_WriteData32(0x12345678,(uint32*)&CDNVM_Memory.appboot);
+  uid1 = CDNVM_Memory.appboot;
+	
   ECUA_Serial_Write("\r\nBOOTED!");
 
 
