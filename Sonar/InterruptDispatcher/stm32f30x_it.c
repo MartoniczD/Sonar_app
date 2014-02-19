@@ -13,6 +13,7 @@
 #include "OS_Types.h"
 #include "CD_Delay.h"
 
+#include "ECUA_CurrentTr.h"
 
 /** \defgroup Interrupt_Dispatcher
  *  \brief Brief description of Interrupt Dispatcher
@@ -143,12 +144,14 @@ void SysTick_Handler(void)
 /*  file (startup_stm32f30x.s).                                            */
 /******************************************************************************/
 /**
-  * @brief  This function handles External line 0 interrupt request.
+  * @brief  This function handles External line 4 interrupt request.
+  * @note	Configured by ECUA - Current Transmitter as ERROR pin.
   * @param  None
   * @retval None
   */
-void EXTI0_IRQHandler(void)
+void EXTI4_IRQHandler(void)
 {    
+	EXTI_ClearITPendingBit(CT_ERR_LINE);
 }
 
 //static volatile uint32 alma = 0;

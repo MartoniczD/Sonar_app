@@ -23,3 +23,4 @@
 .\uv4build\stm32f30x_it.o: .\MicrocontrollerAbsLayer\stm32f30x_misc.h
 .\uv4build\stm32f30x_it.o: .\ComplexDrivers\OS_Types.h
 .\uv4build\stm32f30x_it.o: .\ComplexDrivers\CD_Delay.h
+.\uv4build\stm32f30x_it.o: .\ECUAbstraction\ECUA_CurrentTr.h

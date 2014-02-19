@@ -7,6 +7,7 @@
 ".\uv4build\cd_analogout.o"
 ".\uv4build\cd_uniqueid.o"
 ".\uv4build\cd_nvm.o"
+".\uv4build\ecua_currenttr.o"
 ".\uv4build\stm32f30x_it.o"
 ".\uv4build\stm32f30x_adc.o"
 ".\uv4build\stm32f30x_dac.o"
@@ -33,6 +34,7 @@
 "./MicrocontrollerAbsLayer/CMSIS/LIB/arm_cortexM4lf_math.lib"
 ".\uv4build\ecua_hmi.o"
 ".\uv4build\ecua_serialcomm.o"
+".\uv4build\ecua_currenttr.o"
 --strict --scatter ".\UV4Build\Sonar.sct"
 --summary_stderr --info summarysizes --map --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

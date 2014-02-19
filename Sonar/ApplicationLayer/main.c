@@ -55,6 +55,7 @@
 /* ECU Level Includes */
 #include "ECUA_HMI.h"
 #include "ECUA_SerialComm.h"
+#include "ECUA_CurrentTr.h"
 
 /** @addtogroup Sonar_Application
   * @brief Main application container
@@ -70,12 +71,11 @@
 /* Private define ------------------------------------------------------------*/
 /* Private macro -------------------------------------------------------------*/
 /* Private variables ---------------------------------------------------------*/
+CPUID cpuinfo __attribute__((at(UIDADDRBASE)));
 /* Private function prototypes -----------------------------------------------*/
 /* Private functions ---------------------------------------------------------*/
 
-CPUID alma __attribute__((at(UIDADDRBASE)));
-static uint8 cica = 12;
-static int uid1 = 0;
+
 
 int main(void){
 	
@@ -84,29 +84,17 @@ int main(void){
     while (1);
   }
 
-
-  uid1 = UNIQUEID.REG.UID2;
-
   /* Complex Driver Level Init */
   CD_AnalogOut_Init();
 
   /* ECU Level Init */
   ECUA_HMI_Init();
   ECUA_Serial_Init();
+  ECUA_CurrentTR_Init();
+  ECUA_CurrentTR_Switch(OUT_On);
 
-  CDNVM_WriteData32(0x12345678,(uint32*)&CDNVM_Memory.appboot);
-  uid1 = CDNVM_Memory.appboot;
-	
   ECUA_Serial_Write("\r\nBOOTED!");
 
-
-  //	setup_adc();
-  //  CDOPAMP_Init();
-	/*DAC_SetChannel2Data(DAC_Align_12b_R , 2570);
-	Delay_us(50);
-	DAC_SetChannel2Data(DAC_Align_12b_R , 0);
-	Delay_us(70);
-	*/
 
   while (1)
   {
@@ -114,11 +102,11 @@ int main(void){
 		ECUA_HMI_LedSwitch(LED_On);
 		Delay_us(99999);
 		ECUA_HMI_LedSwitch(LED_Off);
-		//ECUA_Serial_Write("\r\nBOOTED!");
 
   }
 
 }
+
 
 /**
   * @}
@@ -130,3 +118,13 @@ int main(void){
 
 //[EOF]
 
+//CDNVM_WriteData32(0x00000000,(uint32*)&CDNVM_Memory.tempflag);
+//uid1 = CDNVM_Memory.tempflag;
+
+//	setup_adc();
+//  CDOPAMP_Init();
+	/*DAC_SetChannel2Data(DAC_Align_12b_R , 2570);
+	Delay_us(50);
+	DAC_SetChannel2Data(DAC_Align_12b_R , 0);
+	Delay_us(70);
+	*/
