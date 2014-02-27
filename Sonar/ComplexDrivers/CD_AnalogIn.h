@@ -5,7 +5,14 @@
 #include "OS_Types.h"
 #include "CD_Delay.h"
 
-void setup_adc(void);
+/**
+ * @name CD_AnalogIn_Init(void)
+ * @brief Initializes the analog output.
+ * @param None
+ * @return None
+ * @callergraph
+ */
+extern void CD_AnalogIn_Init(void);
 
 #endif /* _CD_ANALOG_IN */
 

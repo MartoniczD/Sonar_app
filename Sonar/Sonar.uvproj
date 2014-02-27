@@ -603,6 +603,16 @@
               <FileType>1</FileType>
               <FilePath>.\ECUAbstraction\ECUA_SerialComm.c</FilePath>
             </File>
+            <File>
+              <FileName>ECUA_CurrentTr.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\ECUAbstraction\ECUA_CurrentTr.c</FilePath>
+            </File>
+            <File>
+              <FileName>ECUA_VGA.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\ECUAbstraction\ECUA_VGA.c</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>

@@ -154,14 +154,19 @@ void EXTI4_IRQHandler(void)
 	EXTI_ClearITPendingBit(CT_ERR_LINE);
 }
 
-//static volatile uint32 alma = 0;
+static volatile uint32 alma = 0;
+volatile uint8 flag = 0;
+
 
 void DMA2_Channel3_IRQHandler(void){
 	
-//	alma++;
-//	if(alma >= 8){
-//		DAC_Cmd(DAC_Channel_1, DISABLE);
-//	}
+	alma++;
+	if(alma >= 8){
+		DAC_Cmd(DAC_Channel_1, DISABLE);
+		DMA_Cmd(DMA2_Channel3, DISABLE);
+		flag = 1;
+		alma = 0;
+	}
 	DMA2->IFCR = DMA_IFCR_CGIF3;
 }
 

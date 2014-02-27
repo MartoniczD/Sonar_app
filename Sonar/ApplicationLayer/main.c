@@ -56,6 +56,7 @@
 #include "ECUA_HMI.h"
 #include "ECUA_SerialComm.h"
 #include "ECUA_CurrentTr.h"
+#include "ECUA_VGA.h"
 
 /** @addtogroup Sonar_Application
   * @brief Main application container
@@ -75,7 +76,7 @@ CPUID cpuinfo __attribute__((at(UIDADDRBASE)));
 /* Private function prototypes -----------------------------------------------*/
 /* Private functions ---------------------------------------------------------*/
 
-
+extern volatile uint8 flag;
 
 int main(void){
 	
@@ -85,23 +86,32 @@ int main(void){
   }
 
   /* Complex Driver Level Init */
-  CD_AnalogOut_Init();
-
+  //CD_AnalogOut_Init();
+	CD_AnalogIn_Init();
+	
   /* ECU Level Init */
   ECUA_HMI_Init();
   ECUA_Serial_Init();
-  ECUA_CurrentTR_Init();
-  ECUA_CurrentTR_Switch(OUT_On);
+  ECUA_VGainAmp_Init();
+  //ECUA_CurrentTR_Init();
+  //ECUA_CurrentTR_Switch(OUT_On);
 
   ECUA_Serial_Write("\r\nBOOTED!");
 
 
   while (1)
   {
+	  	ECUA_HMI_LedSwitch(LED_On);
 		Delay_us(99999);
-		ECUA_HMI_LedSwitch(LED_On);
-		Delay_us(99999);
+		//if(flag > 0){
+
+	//		DAC_Cmd(DAC_Channel_1, ENABLE);
+	//		DMA_Cmd(DMA2_Channel3, ENABLE);
+	//		flag = 0;
+	//	}
+
 		ECUA_HMI_LedSwitch(LED_Off);
+		Delay_us(99999);
 
   }
 

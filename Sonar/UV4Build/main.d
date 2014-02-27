@@ -30,3 +30,4 @@
 .\uv4build\main.o: .\ECUAbstraction\ECUA_HMI.h
 .\uv4build\main.o: .\ECUAbstraction\ECUA_SerialComm.h
 .\uv4build\main.o: .\ECUAbstraction\ECUA_CurrentTr.h
+.\uv4build\main.o: .\ECUAbstraction\ECUA_VGA.h

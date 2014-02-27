@@ -171,7 +171,7 @@ static void setup_adc(void)
 	ADC_CommonStructInit(&ADC_CommonInitStructure);
 	ADC_CommonInitStructure.ADC_Mode = ADC_Mode_RegSimul; 
 	ADC_CommonInitStructure.ADC_Clock = ADC_Clock_AsynClkMode; //ADC_Clock_SynClkModeDiv1
-	ADC_CommonInitStructure.ADC_DMAAccessMode = ADC_DMAAccessMode_1 ; // ADC_DMAAccessMode_2
+	ADC_CommonInitStructure.ADC_DMAAccessMode = ADC_DMAAccessMode_2 ; // ADC_DMAAccessMode_2
 	ADC_CommonInitStructure.ADC_DMAMode = ADC_DMAMode_Circular; 
 	ADC_CommonInitStructure.ADC_TwoSamplingDelay = 0; 
 	ADC_CommonInit(ADC2, &ADC_CommonInitStructure);
@@ -215,6 +215,7 @@ static void setup_adc(void)
 
 	/* Start ADC1 Software Conversion */ 
 	ADC_StartConversion(ADC2);
+	
 }
 
 /* Handles DMA1_Channel1 (ADC Buffer) interrupt request */
@@ -223,7 +224,7 @@ static void setup_adc(void)
  {
  	volatile uint16 *ptr;
 
- 	if(DMA2->ISR & DMA2_IT_HT1)
+ 	if(DMA2->ISR & DMA1_IT_HT1)
  	{
  		/* Half transfer - 1st half buffer has data */
  		ptr = &ADCbuf[0];
