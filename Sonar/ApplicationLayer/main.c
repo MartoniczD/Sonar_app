@@ -51,6 +51,7 @@
 #include "CD_AnalogOut.h"
 #include "CD_UniqueID.h"
 #include "CD_NVM.h"
+#include "CD_TimeBase.h"
 
 /* ECU Level Includes */
 #include "ECUA_HMI.h"
@@ -86,8 +87,9 @@ int main(void){
   }
 
   /* Complex Driver Level Init */
-  //CD_AnalogOut_Init();
-	CD_AnalogIn_Init();
+  CD_AnalogOut_Init();
+	//CD_AnalogIn_Init();
+  CD_TimeBase_Init();
 	
   /* ECU Level Init */
   ECUA_HMI_Init();
@@ -102,7 +104,8 @@ int main(void){
   while (1)
   {
 	  	ECUA_HMI_LedSwitch(LED_On);
-		Delay_us(99999);
+	  	Delay_ms(500);
+		ECUA_VGainAmp_Send(0x55);
 		//if(flag > 0){
 
 	//		DAC_Cmd(DAC_Channel_1, ENABLE);
@@ -111,7 +114,7 @@ int main(void){
 	//	}
 
 		ECUA_HMI_LedSwitch(LED_Off);
-		Delay_us(99999);
+		Delay_ms(500);
 
   }
 

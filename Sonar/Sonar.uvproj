@@ -30,7 +30,7 @@
           <SLE66AMisc></SLE66AMisc>
           <SLE66LinkerMisc></SLE66LinkerMisc>
           <SFDFile>SFD\ST\STM32F30x\STM32F30x.sfr</SFDFile>
-          <bCustSvd>0</bCustSvd>
+          <bCustSvd>1</bCustSvd>
           <UseEnv>0</UseEnv>
           <BinPath></BinPath>
           <IncludePath></IncludePath>
@@ -447,6 +447,11 @@
               <FileName>CD_NVM.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\ComplexDrivers\CD_NVM.c</FilePath>
+            </File>
+            <File>
+              <FileName>CD_TimeBase.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\ComplexDrivers\CD_TimeBase.c</FilePath>
             </File>
           </Files>
         </Group>

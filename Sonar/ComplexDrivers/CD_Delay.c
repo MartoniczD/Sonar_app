@@ -19,3 +19,11 @@ void Delay_us(uint32 pUsec){
 	
 	return;
 }
+
+void Delay_ms(uint32 pMsec){
+
+	CDDELAY_ActVal = pMsec * 1000;
+	while(CDDELAY_ActVal > 0);
+
+	return;
+}

@@ -27,6 +27,7 @@
 .\uv4build\main.o: .\ComplexDrivers\CD_AnalogOut.h
 .\uv4build\main.o: .\ComplexDrivers\CD_UniqueID.h
 .\uv4build\main.o: .\ComplexDrivers\CD_NVM.h
+.\uv4build\main.o: .\ComplexDrivers\CD_TimeBase.h
 .\uv4build\main.o: .\ECUAbstraction\ECUA_HMI.h
 .\uv4build\main.o: .\ECUAbstraction\ECUA_SerialComm.h
 .\uv4build\main.o: .\ECUAbstraction\ECUA_CurrentTr.h

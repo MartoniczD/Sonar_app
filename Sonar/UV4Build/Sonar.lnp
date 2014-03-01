@@ -7,6 +7,7 @@
 ".\uv4build\cd_analogout.o"
 ".\uv4build\cd_uniqueid.o"
 ".\uv4build\cd_nvm.o"
+".\uv4build\cd_timebase.o"
 ".\uv4build\stm32f30x_it.o"
 ".\uv4build\stm32f30x_adc.o"
 ".\uv4build\stm32f30x_dac.o"
