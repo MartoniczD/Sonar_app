@@ -1,6 +1,6 @@
 Dependencies for Project 'Sonar', Target 'STM32F303VC': (DO NOT MODIFY !)
 F (./Startup/startup_stm32f30x_arm.s)(0x53067AC9)(--cpu Cortex-M4.fp -g --apcs=interwork -IApplicationLayer-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F30x--list .\startup_stm32f30x_arm.lst --xref -o .\uv4build\startup_stm32f30x_arm.o --depend .\uv4build\startup_stm32f30x_arm.d)
-F (./ApplicationLayer/main.c)(0x5311D66A)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -IApplicationLayer -I.\ComplexDrivers -I.\InterruptDispatcher -I.\MicrocontrollerAbsLayer -I.\Startup -I.\MicrocontrollerAbsLayer\CMSIS -I.\ECUAbstraction-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F30x-o .\uv4build\main.o --omf_browse .\uv4build\main.crf --depend .\uv4build\main.d)
+F (./ApplicationLayer/main.c)(0x531340CA)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -IApplicationLayer -I.\ComplexDrivers -I.\InterruptDispatcher -I.\MicrocontrollerAbsLayer -I.\Startup -I.\MicrocontrollerAbsLayer\CMSIS -I.\ECUAbstraction-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F30x-DARM_MATH_CM4 -o .\uv4build\main.o --omf_browse .\uv4build\main.crf --depend .\uv4build\main.d)
 I (.\MicrocontrollerAbsLayer\DRV_DrvList.h)(0x5301277B)
 I (.\MicrocontrollerAbsLayer\stm32f30x_adc.h)(0x50630A6C)
 I (.\MicrocontrollerAbsLayer\CMSIS\stm32f30x.h)(0x506309EB)
@@ -24,6 +24,9 @@ I (.\MicrocontrollerAbsLayer\stm32f30x_tim.h)(0x50630A6D)
 I (.\MicrocontrollerAbsLayer\stm32f30x_usart.h)(0x50630A6D)
 I (.\MicrocontrollerAbsLayer\stm32f30x_misc.h)(0x50630A6D)
 I (.\ComplexDrivers\OS_Types.h)(0x5199D824)
+I (C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\arm_math.h)(0x51430F86)
+I (C:\Keil\ARM\ARMCC\include\string.h)(0x5284C88A)
+I (C:\Keil\ARM\ARMCC\include\math.h)(0x5284C884)
 I (.\ComplexDrivers\CD_Delay.h)(0x5311C339)
 I (.\ComplexDrivers\CD_AnalogIn.h)(0x53064142)
 I (.\ComplexDrivers\CD_AnalogOut.h)(0x5300D867)
@@ -34,7 +37,7 @@ I (.\ECUAbstraction\ECUA_HMI.h)(0x53010640)
 I (.\ECUAbstraction\ECUA_SerialComm.h)(0x530B107A)
 I (.\ECUAbstraction\ECUA_CurrentTr.h)(0x5303B200)
 I (.\ECUAbstraction\ECUA_VGA.h)(0x5311AADD)
-F (./ComplexDrivers/CD_AnalogIn.c)(0x530F904B)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -IApplicationLayer -I.\ComplexDrivers -I.\InterruptDispatcher -I.\MicrocontrollerAbsLayer -I.\Startup -I.\MicrocontrollerAbsLayer\CMSIS -I.\ECUAbstraction-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F30x-o .\uv4build\cd_analogin.o --omf_browse .\uv4build\cd_analogin.crf --depend .\uv4build\cd_analogin.d)
+F (./ComplexDrivers/CD_AnalogIn.c)(0x53133CFE)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -IApplicationLayer -I.\ComplexDrivers -I.\InterruptDispatcher -I.\MicrocontrollerAbsLayer -I.\Startup -I.\MicrocontrollerAbsLayer\CMSIS -I.\ECUAbstraction-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F30x-DARM_MATH_CM4 -o .\uv4build\cd_analogin.o --omf_browse .\uv4build\cd_analogin.crf --depend .\uv4build\cd_analogin.d)
 I (./ComplexDrivers/CD_AnalogIn.h)(0x53064142)
 I (.\MicrocontrollerAbsLayer\DRV_DrvList.h)(0x5301277B)
 I (.\MicrocontrollerAbsLayer\stm32f30x_adc.h)(0x50630A6C)
@@ -60,10 +63,10 @@ I (.\MicrocontrollerAbsLayer\stm32f30x_usart.h)(0x50630A6D)
 I (.\MicrocontrollerAbsLayer\stm32f30x_misc.h)(0x50630A6D)
 I (./ComplexDrivers/OS_Types.h)(0x5199D824)
 I (./ComplexDrivers/CD_Delay.h)(0x5311C339)
-F (./ComplexDrivers/CD_Delay.c)(0x5311C30F)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -IApplicationLayer -I.\ComplexDrivers -I.\InterruptDispatcher -I.\MicrocontrollerAbsLayer -I.\Startup -I.\MicrocontrollerAbsLayer\CMSIS -I.\ECUAbstraction-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F30x-o .\uv4build\cd_delay.o --omf_browse .\uv4build\cd_delay.crf --depend .\uv4build\cd_delay.d)
+F (./ComplexDrivers/CD_Delay.c)(0x5311C30F)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -IApplicationLayer -I.\ComplexDrivers -I.\InterruptDispatcher -I.\MicrocontrollerAbsLayer -I.\Startup -I.\MicrocontrollerAbsLayer\CMSIS -I.\ECUAbstraction-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F30x-DARM_MATH_CM4 -o .\uv4build\cd_delay.o --omf_browse .\uv4build\cd_delay.crf --depend .\uv4build\cd_delay.d)
 I (./ComplexDrivers/CD_Delay.h)(0x5311C339)
 I (./ComplexDrivers/OS_Types.h)(0x5199D824)
-F (./ComplexDrivers/CD_OPAMP.c)(0x52C6EE7B)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -IApplicationLayer -I.\ComplexDrivers -I.\InterruptDispatcher -I.\MicrocontrollerAbsLayer -I.\Startup -I.\MicrocontrollerAbsLayer\CMSIS -I.\ECUAbstraction-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F30x-o .\uv4build\cd_opamp.o --omf_browse .\uv4build\cd_opamp.crf --depend .\uv4build\cd_opamp.d)
+F (./ComplexDrivers/CD_OPAMP.c)(0x52C6EE7B)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -IApplicationLayer -I.\ComplexDrivers -I.\InterruptDispatcher -I.\MicrocontrollerAbsLayer -I.\Startup -I.\MicrocontrollerAbsLayer\CMSIS -I.\ECUAbstraction-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F30x-DARM_MATH_CM4 -o .\uv4build\cd_opamp.o --omf_browse .\uv4build\cd_opamp.crf --depend .\uv4build\cd_opamp.d)
 I (./ComplexDrivers/CD_OPAMP.h)(0x52C6EA77)
 I (.\MicrocontrollerAbsLayer\DRV_DrvList.h)(0x5301277B)
 I (.\MicrocontrollerAbsLayer\stm32f30x_adc.h)(0x50630A6C)
@@ -88,7 +91,7 @@ I (.\MicrocontrollerAbsLayer\stm32f30x_tim.h)(0x50630A6D)
 I (.\MicrocontrollerAbsLayer\stm32f30x_usart.h)(0x50630A6D)
 I (.\MicrocontrollerAbsLayer\stm32f30x_misc.h)(0x50630A6D)
 I (./ComplexDrivers/OS_Types.h)(0x5199D824)
-F (./ComplexDrivers/CD_AnalogOut.c)(0x530665A5)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -IApplicationLayer -I.\ComplexDrivers -I.\InterruptDispatcher -I.\MicrocontrollerAbsLayer -I.\Startup -I.\MicrocontrollerAbsLayer\CMSIS -I.\ECUAbstraction-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F30x-o .\uv4build\cd_analogout.o --omf_browse .\uv4build\cd_analogout.crf --depend .\uv4build\cd_analogout.d)
+F (./ComplexDrivers/CD_AnalogOut.c)(0x530665A5)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -IApplicationLayer -I.\ComplexDrivers -I.\InterruptDispatcher -I.\MicrocontrollerAbsLayer -I.\Startup -I.\MicrocontrollerAbsLayer\CMSIS -I.\ECUAbstraction-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F30x-DARM_MATH_CM4 -o .\uv4build\cd_analogout.o --omf_browse .\uv4build\cd_analogout.crf --depend .\uv4build\cd_analogout.d)
 I (./ComplexDrivers/CD_AnalogOut.h)(0x5300D867)
 I (.\MicrocontrollerAbsLayer\DRV_DrvList.h)(0x5301277B)
 I (.\MicrocontrollerAbsLayer\stm32f30x_adc.h)(0x50630A6C)
@@ -113,10 +116,10 @@ I (.\MicrocontrollerAbsLayer\stm32f30x_tim.h)(0x50630A6D)
 I (.\MicrocontrollerAbsLayer\stm32f30x_usart.h)(0x50630A6D)
 I (.\MicrocontrollerAbsLayer\stm32f30x_misc.h)(0x50630A6D)
 I (./ComplexDrivers/OS_Types.h)(0x5199D824)
-F (.\ComplexDrivers\CD_UniqueID.c)(0x53011125)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -IApplicationLayer -I.\ComplexDrivers -I.\InterruptDispatcher -I.\MicrocontrollerAbsLayer -I.\Startup -I.\MicrocontrollerAbsLayer\CMSIS -I.\ECUAbstraction-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F30x-o .\uv4build\cd_uniqueid.o --omf_browse .\uv4build\cd_uniqueid.crf --depend .\uv4build\cd_uniqueid.d)
+F (.\ComplexDrivers\CD_UniqueID.c)(0x53011125)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -IApplicationLayer -I.\ComplexDrivers -I.\InterruptDispatcher -I.\MicrocontrollerAbsLayer -I.\Startup -I.\MicrocontrollerAbsLayer\CMSIS -I.\ECUAbstraction-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F30x-DARM_MATH_CM4 -o .\uv4build\cd_uniqueid.o --omf_browse .\uv4build\cd_uniqueid.crf --depend .\uv4build\cd_uniqueid.d)
 I (ComplexDrivers\CD_UniqueID.h)(0x53027426)
 I (ComplexDrivers\OS_Types.h)(0x5199D824)
-F (.\ComplexDrivers\CD_NVM.c)(0x53026540)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -IApplicationLayer -I.\ComplexDrivers -I.\InterruptDispatcher -I.\MicrocontrollerAbsLayer -I.\Startup -I.\MicrocontrollerAbsLayer\CMSIS -I.\ECUAbstraction-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F30x-o .\uv4build\cd_nvm.o --omf_browse .\uv4build\cd_nvm.crf --depend .\uv4build\cd_nvm.d)
+F (.\ComplexDrivers\CD_NVM.c)(0x53026540)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -IApplicationLayer -I.\ComplexDrivers -I.\InterruptDispatcher -I.\MicrocontrollerAbsLayer -I.\Startup -I.\MicrocontrollerAbsLayer\CMSIS -I.\ECUAbstraction-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F30x-DARM_MATH_CM4 -o .\uv4build\cd_nvm.o --omf_browse .\uv4build\cd_nvm.crf --depend .\uv4build\cd_nvm.d)
 I (ComplexDrivers\CD_NVM.h)(0x53026569)
 I (.\MicrocontrollerAbsLayer\DRV_DrvList.h)(0x5301277B)
 I (.\MicrocontrollerAbsLayer\stm32f30x_adc.h)(0x50630A6C)
@@ -141,7 +144,7 @@ I (.\MicrocontrollerAbsLayer\stm32f30x_tim.h)(0x50630A6D)
 I (.\MicrocontrollerAbsLayer\stm32f30x_usart.h)(0x50630A6D)
 I (.\MicrocontrollerAbsLayer\stm32f30x_misc.h)(0x50630A6D)
 I (ComplexDrivers\OS_Types.h)(0x5199D824)
-F (.\ComplexDrivers\CD_TimeBase.c)(0x5311C1CE)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -IApplicationLayer -I.\ComplexDrivers -I.\InterruptDispatcher -I.\MicrocontrollerAbsLayer -I.\Startup -I.\MicrocontrollerAbsLayer\CMSIS -I.\ECUAbstraction-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F30x-o .\uv4build\cd_timebase.o --omf_browse .\uv4build\cd_timebase.crf --depend .\uv4build\cd_timebase.d)
+F (.\ComplexDrivers\CD_TimeBase.c)(0x53133998)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -IApplicationLayer -I.\ComplexDrivers -I.\InterruptDispatcher -I.\MicrocontrollerAbsLayer -I.\Startup -I.\MicrocontrollerAbsLayer\CMSIS -I.\ECUAbstraction-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F30x-DARM_MATH_CM4 -o .\uv4build\cd_timebase.o --omf_browse .\uv4build\cd_timebase.crf --depend .\uv4build\cd_timebase.d)
 I (ComplexDrivers\CD_TimeBase.h)(0x5311BF9C)
 I (.\MicrocontrollerAbsLayer\DRV_DrvList.h)(0x5301277B)
 I (.\MicrocontrollerAbsLayer\stm32f30x_adc.h)(0x50630A6C)
@@ -166,7 +169,7 @@ I (.\MicrocontrollerAbsLayer\stm32f30x_tim.h)(0x50630A6D)
 I (.\MicrocontrollerAbsLayer\stm32f30x_usart.h)(0x50630A6D)
 I (.\MicrocontrollerAbsLayer\stm32f30x_misc.h)(0x50630A6D)
 I (ComplexDrivers\OS_Types.h)(0x5199D824)
-F (./InterruptDispatcher/stm32f30x_it.c)(0x53067C52)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -IApplicationLayer -I.\ComplexDrivers -I.\InterruptDispatcher -I.\MicrocontrollerAbsLayer -I.\Startup -I.\MicrocontrollerAbsLayer\CMSIS -I.\ECUAbstraction-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F30x-o .\uv4build\stm32f30x_it.o --omf_browse .\uv4build\stm32f30x_it.crf --depend .\uv4build\stm32f30x_it.d)
+F (./InterruptDispatcher/stm32f30x_it.c)(0x53131DC0)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -IApplicationLayer -I.\ComplexDrivers -I.\InterruptDispatcher -I.\MicrocontrollerAbsLayer -I.\Startup -I.\MicrocontrollerAbsLayer\CMSIS -I.\ECUAbstraction-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F30x-DARM_MATH_CM4 -o .\uv4build\stm32f30x_it.o --omf_browse .\uv4build\stm32f30x_it.crf --depend .\uv4build\stm32f30x_it.d)
 I (.\MicrocontrollerAbsLayer\DRV_DrvList.h)(0x5301277B)
 I (.\MicrocontrollerAbsLayer\stm32f30x_adc.h)(0x50630A6C)
 I (.\MicrocontrollerAbsLayer\CMSIS\stm32f30x.h)(0x506309EB)
@@ -192,7 +195,8 @@ I (.\MicrocontrollerAbsLayer\stm32f30x_misc.h)(0x50630A6D)
 I (.\ComplexDrivers\OS_Types.h)(0x5199D824)
 I (.\ComplexDrivers\CD_Delay.h)(0x5311C339)
 I (.\ECUAbstraction\ECUA_CurrentTr.h)(0x5303B200)
-F (./MicrocontrollerAbsLayer/stm32f30x_adc.c)(0x52B19175)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -IApplicationLayer -I.\ComplexDrivers -I.\InterruptDispatcher -I.\MicrocontrollerAbsLayer -I.\Startup -I.\MicrocontrollerAbsLayer\CMSIS -I.\ECUAbstraction-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F30x-o .\uv4build\stm32f30x_adc.o --omf_browse .\uv4build\stm32f30x_adc.crf --depend .\uv4build\stm32f30x_adc.d)
+I (.\ECUAbstraction\ECUA_HMI.h)(0x53010640)
+F (./MicrocontrollerAbsLayer/stm32f30x_adc.c)(0x52B19175)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -IApplicationLayer -I.\ComplexDrivers -I.\InterruptDispatcher -I.\MicrocontrollerAbsLayer -I.\Startup -I.\MicrocontrollerAbsLayer\CMSIS -I.\ECUAbstraction-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F30x-DARM_MATH_CM4 -o .\uv4build\stm32f30x_adc.o --omf_browse .\uv4build\stm32f30x_adc.crf --depend .\uv4build\stm32f30x_adc.d)
 I (./MicrocontrollerAbsLayer/stm32f30x_adc.h)(0x50630A6C)
 I (.\MicrocontrollerAbsLayer\CMSIS\stm32f30x.h)(0x506309EB)
 I (C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cm4.h)(0x512C80D2)
@@ -202,7 +206,7 @@ I (C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cmFunc.h)(0x512C80D2)
 I (C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cm4_simd.h)(0x522D9D58)
 I (.\MicrocontrollerAbsLayer\CMSIS\system_stm32f30x.h)(0x506309EB)
 I (./MicrocontrollerAbsLayer/stm32f30x_rcc.h)(0x50630A6D)
-F (./MicrocontrollerAbsLayer/stm32f30x_dac.c)(0x52B1907B)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -IApplicationLayer -I.\ComplexDrivers -I.\InterruptDispatcher -I.\MicrocontrollerAbsLayer -I.\Startup -I.\MicrocontrollerAbsLayer\CMSIS -I.\ECUAbstraction-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F30x-o .\uv4build\stm32f30x_dac.o --omf_browse .\uv4build\stm32f30x_dac.crf --depend .\uv4build\stm32f30x_dac.d)
+F (./MicrocontrollerAbsLayer/stm32f30x_dac.c)(0x52B1907B)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -IApplicationLayer -I.\ComplexDrivers -I.\InterruptDispatcher -I.\MicrocontrollerAbsLayer -I.\Startup -I.\MicrocontrollerAbsLayer\CMSIS -I.\ECUAbstraction-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F30x-DARM_MATH_CM4 -o .\uv4build\stm32f30x_dac.o --omf_browse .\uv4build\stm32f30x_dac.crf --depend .\uv4build\stm32f30x_dac.d)
 I (./MicrocontrollerAbsLayer/stm32f30x_dac.h)(0x50630A6C)
 I (.\MicrocontrollerAbsLayer\CMSIS\stm32f30x.h)(0x506309EB)
 I (C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cm4.h)(0x512C80D2)
@@ -212,7 +216,7 @@ I (C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cmFunc.h)(0x512C80D2)
 I (C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cm4_simd.h)(0x522D9D58)
 I (.\MicrocontrollerAbsLayer\CMSIS\system_stm32f30x.h)(0x506309EB)
 I (./MicrocontrollerAbsLayer/stm32f30x_rcc.h)(0x50630A6D)
-F (./MicrocontrollerAbsLayer/stm32f30x_dma.c)(0x52B1908B)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -IApplicationLayer -I.\ComplexDrivers -I.\InterruptDispatcher -I.\MicrocontrollerAbsLayer -I.\Startup -I.\MicrocontrollerAbsLayer\CMSIS -I.\ECUAbstraction-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F30x-o .\uv4build\stm32f30x_dma.o --omf_browse .\uv4build\stm32f30x_dma.crf --depend .\uv4build\stm32f30x_dma.d)
+F (./MicrocontrollerAbsLayer/stm32f30x_dma.c)(0x52B1908B)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -IApplicationLayer -I.\ComplexDrivers -I.\InterruptDispatcher -I.\MicrocontrollerAbsLayer -I.\Startup -I.\MicrocontrollerAbsLayer\CMSIS -I.\ECUAbstraction-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F30x-DARM_MATH_CM4 -o .\uv4build\stm32f30x_dma.o --omf_browse .\uv4build\stm32f30x_dma.crf --depend .\uv4build\stm32f30x_dma.d)
 I (./MicrocontrollerAbsLayer/stm32f30x_dma.h)(0x50630A6D)
 I (.\MicrocontrollerAbsLayer\CMSIS\stm32f30x.h)(0x506309EB)
 I (C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cm4.h)(0x512C80D2)
@@ -221,7 +225,7 @@ I (C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cmInstr.h)(0x51BAB7D4)
 I (C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cmFunc.h)(0x512C80D2)
 I (C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cm4_simd.h)(0x522D9D58)
 I (.\MicrocontrollerAbsLayer\CMSIS\system_stm32f30x.h)(0x506309EB)
-F (./MicrocontrollerAbsLayer/stm32f30x_exti.c)(0x52B19099)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -IApplicationLayer -I.\ComplexDrivers -I.\InterruptDispatcher -I.\MicrocontrollerAbsLayer -I.\Startup -I.\MicrocontrollerAbsLayer\CMSIS -I.\ECUAbstraction-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F30x-o .\uv4build\stm32f30x_exti.o --omf_browse .\uv4build\stm32f30x_exti.crf --depend .\uv4build\stm32f30x_exti.d)
+F (./MicrocontrollerAbsLayer/stm32f30x_exti.c)(0x52B19099)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -IApplicationLayer -I.\ComplexDrivers -I.\InterruptDispatcher -I.\MicrocontrollerAbsLayer -I.\Startup -I.\MicrocontrollerAbsLayer\CMSIS -I.\ECUAbstraction-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F30x-DARM_MATH_CM4 -o .\uv4build\stm32f30x_exti.o --omf_browse .\uv4build\stm32f30x_exti.crf --depend .\uv4build\stm32f30x_exti.d)
 I (./MicrocontrollerAbsLayer/stm32f30x_exti.h)(0x50630A6D)
 I (.\MicrocontrollerAbsLayer\CMSIS\stm32f30x.h)(0x506309EB)
 I (C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cm4.h)(0x512C80D2)
@@ -230,7 +234,7 @@ I (C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cmInstr.h)(0x51BAB7D4)
 I (C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cmFunc.h)(0x512C80D2)
 I (C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cm4_simd.h)(0x522D9D58)
 I (.\MicrocontrollerAbsLayer\CMSIS\system_stm32f30x.h)(0x506309EB)
-F (./MicrocontrollerAbsLayer/stm32f30x_gpio.c)(0x52B190A7)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -IApplicationLayer -I.\ComplexDrivers -I.\InterruptDispatcher -I.\MicrocontrollerAbsLayer -I.\Startup -I.\MicrocontrollerAbsLayer\CMSIS -I.\ECUAbstraction-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F30x-o .\uv4build\stm32f30x_gpio.o --omf_browse .\uv4build\stm32f30x_gpio.crf --depend .\uv4build\stm32f30x_gpio.d)
+F (./MicrocontrollerAbsLayer/stm32f30x_gpio.c)(0x52B190A7)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -IApplicationLayer -I.\ComplexDrivers -I.\InterruptDispatcher -I.\MicrocontrollerAbsLayer -I.\Startup -I.\MicrocontrollerAbsLayer\CMSIS -I.\ECUAbstraction-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F30x-DARM_MATH_CM4 -o .\uv4build\stm32f30x_gpio.o --omf_browse .\uv4build\stm32f30x_gpio.crf --depend .\uv4build\stm32f30x_gpio.d)
 I (./MicrocontrollerAbsLayer/stm32f30x_gpio.h)(0x50630A6D)
 I (.\MicrocontrollerAbsLayer\CMSIS\stm32f30x.h)(0x506309EB)
 I (C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cm4.h)(0x512C80D2)
@@ -240,7 +244,7 @@ I (C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cmFunc.h)(0x512C80D2)
 I (C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cm4_simd.h)(0x522D9D58)
 I (.\MicrocontrollerAbsLayer\CMSIS\system_stm32f30x.h)(0x506309EB)
 I (./MicrocontrollerAbsLayer/stm32f30x_rcc.h)(0x50630A6D)
-F (./MicrocontrollerAbsLayer/stm32f30x_i2c.c)(0x52B190B4)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -IApplicationLayer -I.\ComplexDrivers -I.\InterruptDispatcher -I.\MicrocontrollerAbsLayer -I.\Startup -I.\MicrocontrollerAbsLayer\CMSIS -I.\ECUAbstraction-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F30x-o .\uv4build\stm32f30x_i2c.o --omf_browse .\uv4build\stm32f30x_i2c.crf --depend .\uv4build\stm32f30x_i2c.d)
+F (./MicrocontrollerAbsLayer/stm32f30x_i2c.c)(0x52B190B4)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -IApplicationLayer -I.\ComplexDrivers -I.\InterruptDispatcher -I.\MicrocontrollerAbsLayer -I.\Startup -I.\MicrocontrollerAbsLayer\CMSIS -I.\ECUAbstraction-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F30x-DARM_MATH_CM4 -o .\uv4build\stm32f30x_i2c.o --omf_browse .\uv4build\stm32f30x_i2c.crf --depend .\uv4build\stm32f30x_i2c.d)
 I (./MicrocontrollerAbsLayer/stm32f30x_i2c.h)(0x50630A6D)
 I (.\MicrocontrollerAbsLayer\CMSIS\stm32f30x.h)(0x506309EB)
 I (C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cm4.h)(0x512C80D2)
@@ -250,7 +254,7 @@ I (C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cmFunc.h)(0x512C80D2)
 I (C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cm4_simd.h)(0x522D9D58)
 I (.\MicrocontrollerAbsLayer\CMSIS\system_stm32f30x.h)(0x506309EB)
 I (./MicrocontrollerAbsLayer/stm32f30x_rcc.h)(0x50630A6D)
-F (./MicrocontrollerAbsLayer/stm32f30x_misc.c)(0x52B190BF)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -IApplicationLayer -I.\ComplexDrivers -I.\InterruptDispatcher -I.\MicrocontrollerAbsLayer -I.\Startup -I.\MicrocontrollerAbsLayer\CMSIS -I.\ECUAbstraction-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F30x-o .\uv4build\stm32f30x_misc.o --omf_browse .\uv4build\stm32f30x_misc.crf --depend .\uv4build\stm32f30x_misc.d)
+F (./MicrocontrollerAbsLayer/stm32f30x_misc.c)(0x52B190BF)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -IApplicationLayer -I.\ComplexDrivers -I.\InterruptDispatcher -I.\MicrocontrollerAbsLayer -I.\Startup -I.\MicrocontrollerAbsLayer\CMSIS -I.\ECUAbstraction-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F30x-DARM_MATH_CM4 -o .\uv4build\stm32f30x_misc.o --omf_browse .\uv4build\stm32f30x_misc.crf --depend .\uv4build\stm32f30x_misc.d)
 I (./MicrocontrollerAbsLayer/stm32f30x_misc.h)(0x50630A6D)
 I (.\MicrocontrollerAbsLayer\CMSIS\stm32f30x.h)(0x506309EB)
 I (C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cm4.h)(0x512C80D2)
@@ -259,7 +263,7 @@ I (C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cmInstr.h)(0x51BAB7D4)
 I (C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cmFunc.h)(0x512C80D2)
 I (C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cm4_simd.h)(0x522D9D58)
 I (.\MicrocontrollerAbsLayer\CMSIS\system_stm32f30x.h)(0x506309EB)
-F (./MicrocontrollerAbsLayer/stm32f30x_opamp.c)(0x52B190D4)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -IApplicationLayer -I.\ComplexDrivers -I.\InterruptDispatcher -I.\MicrocontrollerAbsLayer -I.\Startup -I.\MicrocontrollerAbsLayer\CMSIS -I.\ECUAbstraction-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F30x-o .\uv4build\stm32f30x_opamp.o --omf_browse .\uv4build\stm32f30x_opamp.crf --depend .\uv4build\stm32f30x_opamp.d)
+F (./MicrocontrollerAbsLayer/stm32f30x_opamp.c)(0x52B190D4)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -IApplicationLayer -I.\ComplexDrivers -I.\InterruptDispatcher -I.\MicrocontrollerAbsLayer -I.\Startup -I.\MicrocontrollerAbsLayer\CMSIS -I.\ECUAbstraction-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F30x-DARM_MATH_CM4 -o .\uv4build\stm32f30x_opamp.o --omf_browse .\uv4build\stm32f30x_opamp.crf --depend .\uv4build\stm32f30x_opamp.d)
 I (./MicrocontrollerAbsLayer/stm32f30x_opamp.h)(0x50630A6D)
 I (.\MicrocontrollerAbsLayer\CMSIS\stm32f30x.h)(0x506309EB)
 I (C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cm4.h)(0x512C80D2)
@@ -268,7 +272,7 @@ I (C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cmInstr.h)(0x51BAB7D4)
 I (C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cmFunc.h)(0x512C80D2)
 I (C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cm4_simd.h)(0x522D9D58)
 I (.\MicrocontrollerAbsLayer\CMSIS\system_stm32f30x.h)(0x506309EB)
-F (./MicrocontrollerAbsLayer/stm32f30x_rcc.c)(0x52B19140)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -IApplicationLayer -I.\ComplexDrivers -I.\InterruptDispatcher -I.\MicrocontrollerAbsLayer -I.\Startup -I.\MicrocontrollerAbsLayer\CMSIS -I.\ECUAbstraction-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F30x-o .\uv4build\stm32f30x_rcc.o --omf_browse .\uv4build\stm32f30x_rcc.crf --depend .\uv4build\stm32f30x_rcc.d)
+F (./MicrocontrollerAbsLayer/stm32f30x_rcc.c)(0x52B19140)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -IApplicationLayer -I.\ComplexDrivers -I.\InterruptDispatcher -I.\MicrocontrollerAbsLayer -I.\Startup -I.\MicrocontrollerAbsLayer\CMSIS -I.\ECUAbstraction-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F30x-DARM_MATH_CM4 -o .\uv4build\stm32f30x_rcc.o --omf_browse .\uv4build\stm32f30x_rcc.crf --depend .\uv4build\stm32f30x_rcc.d)
 I (./MicrocontrollerAbsLayer/stm32f30x_rcc.h)(0x50630A6D)
 I (.\MicrocontrollerAbsLayer\CMSIS\stm32f30x.h)(0x506309EB)
 I (C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cm4.h)(0x512C80D2)
@@ -277,7 +281,7 @@ I (C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cmInstr.h)(0x51BAB7D4)
 I (C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cmFunc.h)(0x512C80D2)
 I (C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cm4_simd.h)(0x522D9D58)
 I (.\MicrocontrollerAbsLayer\CMSIS\system_stm32f30x.h)(0x506309EB)
-F (./MicrocontrollerAbsLayer/stm32f30x_spi.c)(0x52B1913F)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -IApplicationLayer -I.\ComplexDrivers -I.\InterruptDispatcher -I.\MicrocontrollerAbsLayer -I.\Startup -I.\MicrocontrollerAbsLayer\CMSIS -I.\ECUAbstraction-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F30x-o .\uv4build\stm32f30x_spi.o --omf_browse .\uv4build\stm32f30x_spi.crf --depend .\uv4build\stm32f30x_spi.d)
+F (./MicrocontrollerAbsLayer/stm32f30x_spi.c)(0x52B1913F)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -IApplicationLayer -I.\ComplexDrivers -I.\InterruptDispatcher -I.\MicrocontrollerAbsLayer -I.\Startup -I.\MicrocontrollerAbsLayer\CMSIS -I.\ECUAbstraction-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F30x-DARM_MATH_CM4 -o .\uv4build\stm32f30x_spi.o --omf_browse .\uv4build\stm32f30x_spi.crf --depend .\uv4build\stm32f30x_spi.d)
 I (./MicrocontrollerAbsLayer/stm32f30x_spi.h)(0x50630A6D)
 I (.\MicrocontrollerAbsLayer\CMSIS\stm32f30x.h)(0x506309EB)
 I (C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cm4.h)(0x512C80D2)
@@ -287,7 +291,7 @@ I (C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cmFunc.h)(0x512C80D2)
 I (C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cm4_simd.h)(0x522D9D58)
 I (.\MicrocontrollerAbsLayer\CMSIS\system_stm32f30x.h)(0x506309EB)
 I (./MicrocontrollerAbsLayer/stm32f30x_rcc.h)(0x50630A6D)
-F (./MicrocontrollerAbsLayer/stm32f30x_syscfg.c)(0x52B1913E)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -IApplicationLayer -I.\ComplexDrivers -I.\InterruptDispatcher -I.\MicrocontrollerAbsLayer -I.\Startup -I.\MicrocontrollerAbsLayer\CMSIS -I.\ECUAbstraction-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F30x-o .\uv4build\stm32f30x_syscfg.o --omf_browse .\uv4build\stm32f30x_syscfg.crf --depend .\uv4build\stm32f30x_syscfg.d)
+F (./MicrocontrollerAbsLayer/stm32f30x_syscfg.c)(0x52B1913E)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -IApplicationLayer -I.\ComplexDrivers -I.\InterruptDispatcher -I.\MicrocontrollerAbsLayer -I.\Startup -I.\MicrocontrollerAbsLayer\CMSIS -I.\ECUAbstraction-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F30x-DARM_MATH_CM4 -o .\uv4build\stm32f30x_syscfg.o --omf_browse .\uv4build\stm32f30x_syscfg.crf --depend .\uv4build\stm32f30x_syscfg.d)
 I (./MicrocontrollerAbsLayer/stm32f30x_syscfg.h)(0x50630A6D)
 I (.\MicrocontrollerAbsLayer\CMSIS\stm32f30x.h)(0x506309EB)
 I (C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cm4.h)(0x512C80D2)
@@ -296,7 +300,7 @@ I (C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cmInstr.h)(0x51BAB7D4)
 I (C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cmFunc.h)(0x512C80D2)
 I (C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cm4_simd.h)(0x522D9D58)
 I (.\MicrocontrollerAbsLayer\CMSIS\system_stm32f30x.h)(0x506309EB)
-F (./MicrocontrollerAbsLayer/stm32f30x_tim.c)(0x52B1913D)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -IApplicationLayer -I.\ComplexDrivers -I.\InterruptDispatcher -I.\MicrocontrollerAbsLayer -I.\Startup -I.\MicrocontrollerAbsLayer\CMSIS -I.\ECUAbstraction-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F30x-o .\uv4build\stm32f30x_tim.o --omf_browse .\uv4build\stm32f30x_tim.crf --depend .\uv4build\stm32f30x_tim.d)
+F (./MicrocontrollerAbsLayer/stm32f30x_tim.c)(0x52B1913D)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -IApplicationLayer -I.\ComplexDrivers -I.\InterruptDispatcher -I.\MicrocontrollerAbsLayer -I.\Startup -I.\MicrocontrollerAbsLayer\CMSIS -I.\ECUAbstraction-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F30x-DARM_MATH_CM4 -o .\uv4build\stm32f30x_tim.o --omf_browse .\uv4build\stm32f30x_tim.crf --depend .\uv4build\stm32f30x_tim.d)
 I (./MicrocontrollerAbsLayer/stm32f30x_tim.h)(0x50630A6D)
 I (.\MicrocontrollerAbsLayer\CMSIS\stm32f30x.h)(0x506309EB)
 I (C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cm4.h)(0x512C80D2)
@@ -306,7 +310,7 @@ I (C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cmFunc.h)(0x512C80D2)
 I (C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cm4_simd.h)(0x522D9D58)
 I (.\MicrocontrollerAbsLayer\CMSIS\system_stm32f30x.h)(0x506309EB)
 I (./MicrocontrollerAbsLayer/stm32f30x_rcc.h)(0x50630A6D)
-F (./MicrocontrollerAbsLayer/stm32f30x_usart.c)(0x52B1913B)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -IApplicationLayer -I.\ComplexDrivers -I.\InterruptDispatcher -I.\MicrocontrollerAbsLayer -I.\Startup -I.\MicrocontrollerAbsLayer\CMSIS -I.\ECUAbstraction-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F30x-o .\uv4build\stm32f30x_usart.o --omf_browse .\uv4build\stm32f30x_usart.crf --depend .\uv4build\stm32f30x_usart.d)
+F (./MicrocontrollerAbsLayer/stm32f30x_usart.c)(0x52B1913B)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -IApplicationLayer -I.\ComplexDrivers -I.\InterruptDispatcher -I.\MicrocontrollerAbsLayer -I.\Startup -I.\MicrocontrollerAbsLayer\CMSIS -I.\ECUAbstraction-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F30x-DARM_MATH_CM4 -o .\uv4build\stm32f30x_usart.o --omf_browse .\uv4build\stm32f30x_usart.crf --depend .\uv4build\stm32f30x_usart.d)
 I (./MicrocontrollerAbsLayer/stm32f30x_usart.h)(0x50630A6D)
 I (.\MicrocontrollerAbsLayer\CMSIS\stm32f30x.h)(0x506309EB)
 I (C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cm4.h)(0x512C80D2)
@@ -316,7 +320,7 @@ I (C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cmFunc.h)(0x512C80D2)
 I (C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cm4_simd.h)(0x522D9D58)
 I (.\MicrocontrollerAbsLayer\CMSIS\system_stm32f30x.h)(0x506309EB)
 I (./MicrocontrollerAbsLayer/stm32f30x_rcc.h)(0x50630A6D)
-F (.\MicrocontrollerAbsLayer\stm32f30x_flash.c)(0x53026159)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -IApplicationLayer -I.\ComplexDrivers -I.\InterruptDispatcher -I.\MicrocontrollerAbsLayer -I.\Startup -I.\MicrocontrollerAbsLayer\CMSIS -I.\ECUAbstraction-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F30x-o .\uv4build\stm32f30x_flash.o --omf_browse .\uv4build\stm32f30x_flash.crf --depend .\uv4build\stm32f30x_flash.d)
+F (.\MicrocontrollerAbsLayer\stm32f30x_flash.c)(0x53026159)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -IApplicationLayer -I.\ComplexDrivers -I.\InterruptDispatcher -I.\MicrocontrollerAbsLayer -I.\Startup -I.\MicrocontrollerAbsLayer\CMSIS -I.\ECUAbstraction-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F30x-DARM_MATH_CM4 -o .\uv4build\stm32f30x_flash.o --omf_browse .\uv4build\stm32f30x_flash.crf --depend .\uv4build\stm32f30x_flash.d)
 I (MicrocontrollerAbsLayer\stm32f30x_flash.h)(0x53026050)
 I (.\MicrocontrollerAbsLayer\CMSIS\stm32f30x.h)(0x506309EB)
 I (C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cm4.h)(0x512C80D2)
@@ -325,7 +329,7 @@ I (C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cmInstr.h)(0x51BAB7D4)
 I (C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cmFunc.h)(0x512C80D2)
 I (C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cm4_simd.h)(0x522D9D58)
 I (.\MicrocontrollerAbsLayer\CMSIS\system_stm32f30x.h)(0x506309EB)
-F (./MicrocontrollerAbsLayer/CMSIS/system_stm32f30x.c)(0x52B1B6BB)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -IApplicationLayer -I.\ComplexDrivers -I.\InterruptDispatcher -I.\MicrocontrollerAbsLayer -I.\Startup -I.\MicrocontrollerAbsLayer\CMSIS -I.\ECUAbstraction-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F30x-o .\uv4build\system_stm32f30x.o --omf_browse .\uv4build\system_stm32f30x.crf --depend .\uv4build\system_stm32f30x.d)
+F (./MicrocontrollerAbsLayer/CMSIS/system_stm32f30x.c)(0x52B1B6BB)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -IApplicationLayer -I.\ComplexDrivers -I.\InterruptDispatcher -I.\MicrocontrollerAbsLayer -I.\Startup -I.\MicrocontrollerAbsLayer\CMSIS -I.\ECUAbstraction-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F30x-DARM_MATH_CM4 -o .\uv4build\system_stm32f30x.o --omf_browse .\uv4build\system_stm32f30x.crf --depend .\uv4build\system_stm32f30x.d)
 I (./MicrocontrollerAbsLayer/CMSIS/stm32f30x.h)(0x506309EB)
 I (C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cm4.h)(0x512C80D2)
 I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x5284C88A)
@@ -333,15 +337,8 @@ I (C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cmInstr.h)(0x51BAB7D4)
 I (C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cmFunc.h)(0x512C80D2)
 I (C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cm4_simd.h)(0x522D9D58)
 I (./MicrocontrollerAbsLayer/CMSIS/system_stm32f30x.h)(0x506309EB)
-F (./MicrocontrollerAbsLayer/CMSIS/LIB/arm_cortexM0b_math.lib)(0x50630A44)()
-F (./MicrocontrollerAbsLayer/CMSIS/LIB/arm_cortexM0l_math.lib)(0x50630A49)()
-F (./MicrocontrollerAbsLayer/CMSIS/LIB/arm_cortexM3b_math.lib)(0x50630A4E)()
-F (./MicrocontrollerAbsLayer/CMSIS/LIB/arm_cortexM3l_math.lib)(0x50630A54)()
-F (./MicrocontrollerAbsLayer/CMSIS/LIB/arm_cortexM4b_math.lib)(0x50630A59)()
-F (./MicrocontrollerAbsLayer/CMSIS/LIB/arm_cortexM4bf_math.lib)(0x50630A5F)()
-F (./MicrocontrollerAbsLayer/CMSIS/LIB/arm_cortexM4l_math.lib)(0x50630A64)()
 F (./MicrocontrollerAbsLayer/CMSIS/LIB/arm_cortexM4lf_math.lib)(0x50630A6A)()
-F (.\ECUAbstraction\ECUA_HMI.c)(0x53010827)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -IApplicationLayer -I.\ComplexDrivers -I.\InterruptDispatcher -I.\MicrocontrollerAbsLayer -I.\Startup -I.\MicrocontrollerAbsLayer\CMSIS -I.\ECUAbstraction-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F30x-o .\uv4build\ecua_hmi.o --omf_browse .\uv4build\ecua_hmi.crf --depend .\uv4build\ecua_hmi.d)
+F (.\ECUAbstraction\ECUA_HMI.c)(0x53131567)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -IApplicationLayer -I.\ComplexDrivers -I.\InterruptDispatcher -I.\MicrocontrollerAbsLayer -I.\Startup -I.\MicrocontrollerAbsLayer\CMSIS -I.\ECUAbstraction-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F30x-DARM_MATH_CM4 -o .\uv4build\ecua_hmi.o --omf_browse .\uv4build\ecua_hmi.crf --depend .\uv4build\ecua_hmi.d)
 I (ECUAbstraction\ECUA_HMI.h)(0x53010640)
 I (.\MicrocontrollerAbsLayer\DRV_DrvList.h)(0x5301277B)
 I (.\MicrocontrollerAbsLayer\stm32f30x_adc.h)(0x50630A6C)
@@ -366,7 +363,7 @@ I (.\MicrocontrollerAbsLayer\stm32f30x_tim.h)(0x50630A6D)
 I (.\MicrocontrollerAbsLayer\stm32f30x_usart.h)(0x50630A6D)
 I (.\MicrocontrollerAbsLayer\stm32f30x_misc.h)(0x50630A6D)
 I (.\ComplexDrivers\OS_Types.h)(0x5199D824)
-F (.\ECUAbstraction\ECUA_SerialComm.c)(0x53010871)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -IApplicationLayer -I.\ComplexDrivers -I.\InterruptDispatcher -I.\MicrocontrollerAbsLayer -I.\Startup -I.\MicrocontrollerAbsLayer\CMSIS -I.\ECUAbstraction-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F30x-o .\uv4build\ecua_serialcomm.o --omf_browse .\uv4build\ecua_serialcomm.crf --depend .\uv4build\ecua_serialcomm.d)
+F (.\ECUAbstraction\ECUA_SerialComm.c)(0x53010871)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -IApplicationLayer -I.\ComplexDrivers -I.\InterruptDispatcher -I.\MicrocontrollerAbsLayer -I.\Startup -I.\MicrocontrollerAbsLayer\CMSIS -I.\ECUAbstraction-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F30x-DARM_MATH_CM4 -o .\uv4build\ecua_serialcomm.o --omf_browse .\uv4build\ecua_serialcomm.crf --depend .\uv4build\ecua_serialcomm.d)
 I (ECUAbstraction\ECUA_SerialComm.h)(0x530B107A)
 I (.\MicrocontrollerAbsLayer\DRV_DrvList.h)(0x5301277B)
 I (.\MicrocontrollerAbsLayer\stm32f30x_adc.h)(0x50630A6C)
@@ -391,7 +388,7 @@ I (.\MicrocontrollerAbsLayer\stm32f30x_tim.h)(0x50630A6D)
 I (.\MicrocontrollerAbsLayer\stm32f30x_usart.h)(0x50630A6D)
 I (.\MicrocontrollerAbsLayer\stm32f30x_misc.h)(0x50630A6D)
 I (.\ComplexDrivers\OS_Types.h)(0x5199D824)
-F (.\ECUAbstraction\ECUA_CurrentTr.c)(0x5303B324)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -IApplicationLayer -I.\ComplexDrivers -I.\InterruptDispatcher -I.\MicrocontrollerAbsLayer -I.\Startup -I.\MicrocontrollerAbsLayer\CMSIS -I.\ECUAbstraction-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F30x-o .\uv4build\ecua_currenttr.o --omf_browse .\uv4build\ecua_currenttr.crf --depend .\uv4build\ecua_currenttr.d)
+F (.\ECUAbstraction\ECUA_CurrentTr.c)(0x5303B324)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -IApplicationLayer -I.\ComplexDrivers -I.\InterruptDispatcher -I.\MicrocontrollerAbsLayer -I.\Startup -I.\MicrocontrollerAbsLayer\CMSIS -I.\ECUAbstraction-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F30x-DARM_MATH_CM4 -o .\uv4build\ecua_currenttr.o --omf_browse .\uv4build\ecua_currenttr.crf --depend .\uv4build\ecua_currenttr.d)
 I (ECUAbstraction\ECUA_CurrentTr.h)(0x5303B200)
 I (.\MicrocontrollerAbsLayer\DRV_DrvList.h)(0x5301277B)
 I (.\MicrocontrollerAbsLayer\stm32f30x_adc.h)(0x50630A6C)
@@ -416,7 +413,7 @@ I (.\MicrocontrollerAbsLayer\stm32f30x_tim.h)(0x50630A6D)
 I (.\MicrocontrollerAbsLayer\stm32f30x_usart.h)(0x50630A6D)
 I (.\MicrocontrollerAbsLayer\stm32f30x_misc.h)(0x50630A6D)
 I (.\ComplexDrivers\OS_Types.h)(0x5199D824)
-F (.\ECUAbstraction\ECUA_VGA.c)(0x5311C0B3)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -IApplicationLayer -I.\ComplexDrivers -I.\InterruptDispatcher -I.\MicrocontrollerAbsLayer -I.\Startup -I.\MicrocontrollerAbsLayer\CMSIS -I.\ECUAbstraction-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F30x-o .\uv4build\ecua_vga.o --omf_browse .\uv4build\ecua_vga.crf --depend .\uv4build\ecua_vga.d)
+F (.\ECUAbstraction\ECUA_VGA.c)(0x5311C0B3)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork -IApplicationLayer -I.\ComplexDrivers -I.\InterruptDispatcher -I.\MicrocontrollerAbsLayer -I.\Startup -I.\MicrocontrollerAbsLayer\CMSIS -I.\ECUAbstraction-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F30x-DARM_MATH_CM4 -o .\uv4build\ecua_vga.o --omf_browse .\uv4build\ecua_vga.crf --depend .\uv4build\ecua_vga.d)
 I (.\MicrocontrollerAbsLayer\DRV_DrvList.h)(0x5301277B)
 I (.\MicrocontrollerAbsLayer\stm32f30x_adc.h)(0x50630A6C)
 I (.\MicrocontrollerAbsLayer\CMSIS\stm32f30x.h)(0x506309EB)

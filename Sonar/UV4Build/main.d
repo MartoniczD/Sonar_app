@@ -22,6 +22,10 @@
 .\uv4build\main.o: .\MicrocontrollerAbsLayer\stm32f30x_usart.h
 .\uv4build\main.o: .\MicrocontrollerAbsLayer\stm32f30x_misc.h
 .\uv4build\main.o: .\ComplexDrivers\OS_Types.h
+.\uv4build\main.o: C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\arm_math.h
+.\uv4build\main.o: C:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cm4.h
+.\uv4build\main.o: C:\Keil\ARM\ARMCC\bin\..\include\string.h
+.\uv4build\main.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h
 .\uv4build\main.o: .\ComplexDrivers\CD_Delay.h
 .\uv4build\main.o: .\ComplexDrivers\CD_AnalogIn.h
 .\uv4build\main.o: .\ComplexDrivers\CD_AnalogOut.h

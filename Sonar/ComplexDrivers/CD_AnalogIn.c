@@ -3,7 +3,7 @@
 
 enum { ADC_HALF_BUFFER = 180 };
 volatile uint16 ADCbuf[ADC_HALF_BUFFER*2];
-
+volatile uint32 samples = 0;
 
 static void setup_adc_gpio(void)
 {
@@ -53,26 +53,19 @@ static void setup_adc_dma(void)
 static void calibrate_adc(void)
 {
 	__IO uint16_t calibration_value_1 = 0;	///< __IO = volatile	
-//	__IO uint16_t calibration_value_2 = 0;	
 
   /* ADC Calibration procedure */
   ADC_VoltageRegulatorCmd(ADC1, ENABLE);
- // ADC_VoltageRegulatorCmd(ADC2, ENABLE);
-  
+ 
   /* Insert delay equal to 10 µs */
   Delay_us(10);
   
   ADC_SelectCalibrationMode(ADC1, ADC_CalibrationMode_Single);
   ADC_StartCalibration(ADC1);
 
-//  ADC_SelectCalibrationMode(ADC2, ADC_CalibrationMode_Single);
-//  ADC_StartCalibration(ADC2);
-  
   while(ADC_GetCalibrationStatus(ADC1) != RESET );
   calibration_value_1 = ADC_GetCalibrationValue(ADC1);
 
-//  while(ADC_GetCalibrationStatus(ADC2) != RESET );
-//  calibration_value_2 = ADC_GetCalibrationValue(ADC2);	
 }
 
 void setup_adc(void)
@@ -82,10 +75,11 @@ void setup_adc(void)
 		
 	
 	ADC_DeInit(ADC1);
-	//ADC_DeInit(ADC2);
-	
+		
 	/* Configure the ADC clock */
-	RCC_ADCCLKConfig(RCC_ADC12PLLCLK_Div6);	// 12 MHz  
+	//RCC_ADCCLKConfig(RCC_ADC12PLLCLK_Div6);	// 12 MHz  
+	RCC_ADCCLKConfig(RCC_ADC12PLLCLK_Div128);	//562,5khz
+		
 	/* Enable ADC1 clock */
 	RCC_AHBPeriphClockCmd(RCC_AHBPeriph_ADC12, ENABLE);
 		
@@ -114,12 +108,9 @@ void setup_adc(void)
 	ADC_InitStructure.ADC_AutoInjMode = ADC_AutoInjec_Disable;  
 	ADC_InitStructure.ADC_NbrOfRegChannel = 1;
 	ADC_Init(ADC1, &ADC_InitStructure);
-	//ADC_Init(ADC2, &ADC_InitStructure);
 
-	// PA0 = ADC1 IN1 (channel 1)
-  ADC_RegularChannelConfig(ADC1, ADC_Channel_4, 1, ADC_SampleTime_19Cycles5);
-	// PA4 = ADC2 IN1 (channel 1)
-  //ADC_RegularChannelConfig(ADC2, ADC_Channel_1, 1, ADC_SampleTime_19Cycles5);	
+
+  ADC_RegularChannelConfig(ADC1, ADC_Channel_4, 1, ADC_SampleTime_2Cycles5);
 	
 	/* Configures the ADC DMA */
 	ADC_DMAConfig(ADC1, ADC_DMAMode_Circular);
@@ -129,20 +120,19 @@ void setup_adc(void)
 
   /* Enable ADC1 and ADC2 */
   ADC_Cmd(ADC1, ENABLE);
-  //ADC_Cmd(ADC2, ENABLE);
 
 	/* wait for ADC1 ADRDY */
 	while(!ADC_GetFlagStatus(ADC1, ADC_FLAG_RDY));
 	
-  /* wait for ADC2 ADRDY */
-  //while(!ADC_GetFlagStatus(ADC2, ADC_FLAG_RDY));	
-
 	/* Enable the DMA channel */
 	DMA_Cmd(DMA1_Channel1, ENABLE);
 
 	/* Start ADC1 Software Conversion */ 
 	ADC_StartConversion(ADC1);
 }
+
+volatile int elso = 0;
+volatile int masodik = 0;
 
 /* Handles DMA1_Channel1 (ADC Buffer) interrupt request */
 // void DMA1_Channel1_IRQHandler(void) __attribute__ ((section (".ccmram")));
@@ -151,14 +141,18 @@ void setup_adc(void)
  	volatile uint16 *ptr;
 
 	if(DMA1->ISR & DMA1_IT_TC1){
-		
+		//samples +=180;
+		elso = TIM3->CNT;
 		ptr = &ADCbuf[ADC_HALF_BUFFER];
 		DMA1->IFCR = DMA_IFCR_CTCIF1;
 		
+
 	} else if(DMA1->ISR & DMA1_IT_HT1) {
 		
  		/* Half transfer - 1st half buffer has data */
- 		ptr = &ADCbuf[0];
+		//samples +=180;
+		TIM3->CNT = 0;
+		ptr = &ADCbuf[0];
 		DMA1->IFCR = DMA_IFCR_CHTIF1;
  	}
  	else
@@ -167,11 +161,7 @@ void setup_adc(void)
  		DMA1->IFCR = DMA_IFCR_CGIF1;
  	}
 
- 	/* process the buffer */
- 	//adc_data_callback(ptr, ADC_HALF_BUFFER);
 
- 	/* Clear DMA1_Channel1 interrupt */
- 	
  }
 
  void CD_AnalogIn_Init(void){

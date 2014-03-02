@@ -45,6 +45,8 @@
 #include "DRV_DrvList.h"
 #include "OS_Types.h"
 
+#include "arm_math.h"
+
 /* CD Level Includes */
 #include "CD_Delay.h"
 #include "CD_AnalogIn.h"
@@ -71,40 +73,50 @@
 
 /* Private typedef -----------------------------------------------------------*/
 /* Private define ------------------------------------------------------------*/
+#define SYSTICKVAL		*((int*)0xE000E018)
 /* Private macro -------------------------------------------------------------*/
 /* Private variables ---------------------------------------------------------*/
 CPUID cpuinfo __attribute__((at(UIDADDRBASE)));
 /* Private function prototypes -----------------------------------------------*/
 /* Private functions ---------------------------------------------------------*/
 
-extern volatile uint8 flag;
+volatile uint32 timer1 = 0;
+volatile uint32 timer2 = 0;
 
 int main(void){
 	
-  /* Setup SysTick Timer for 1 µsec interrupts  */
+	/* Setup SysTick Timer for 1 µsec interrupts  */
+	//SysTick_CLKSourceConfig(SysTick_CLKSource_HCLK_Div8);
   if (SysTick_Config(SystemCoreClock / 1000000)){
     while (1);
   }
 
   /* Complex Driver Level Init */
-  //CD_AnalogOut_Init();
-	CD_AnalogIn_Init();
-  CD_TimeBase_Init();
+  CD_AnalogOut_Init();
+  CD_AnalogIn_Init();
+	CD_TimeBase_Init();  
 	
   /* ECU Level Init */
   ECUA_HMI_Init();
   ECUA_Serial_Init();
   ECUA_VGainAmp_Init();
-  //ECUA_CurrentTR_Init();
+  ECUA_CurrentTR_Init();
   //ECUA_CurrentTR_Switch(OUT_On);
 
   ECUA_Serial_Write("\r\nBOOTED!");
+  //ECUA_HMI_LedSwitch(LED_On);
 
-
+	
   while (1)
   {
-	  	ECUA_HMI_LedSwitch(LED_On);
+			((GPIO_TypeDef*)LED_GPIO)->ODR |= LED_PIN;
+		  //timer1 = TIM3->CNT;
+		//TIM3->CNT = 0;
 	  	Delay_ms(500);
+  	//	timer2 = TIM3->CNT;
+		  ((GPIO_TypeDef*)LED_GPIO)->ODR &=~LED_PIN;
+	    Delay_ms(500);
+
 //		ECUA_VGainAmp_Send(0x55);
 		//if(flag > 0){
 
@@ -113,8 +125,8 @@ int main(void){
 	//		flag = 0;
 	//	}
 
-		ECUA_HMI_LedSwitch(LED_Off);
-		Delay_ms(500);
+	//	ECUA_HMI_LedSwitch(LED_Off);
+	//	Delay_ms(500);
 
   }
 

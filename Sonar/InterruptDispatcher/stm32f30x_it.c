@@ -14,6 +14,7 @@
 #include "CD_Delay.h"
 
 #include "ECUA_CurrentTr.h"
+#include "ECUA_HMI.h"
 
 /** \defgroup Interrupt_Dispatcher
  *  \brief Brief description of Interrupt Dispatcher
@@ -160,13 +161,13 @@ volatile uint8 flag = 0;
 
 void DMA2_Channel3_IRQHandler(void){
 	
-	alma++;
-	if(alma >= 8){
-		DAC_Cmd(DAC_Channel_1, DISABLE);
-		DMA_Cmd(DMA2_Channel3, DISABLE);
-		flag = 1;
-		alma = 0;
-	}
+	//alma++;
+	//if(alma >= 8){
+	//	DAC_Cmd(DAC_Channel_1, DISABLE);
+	//	DMA_Cmd(DMA2_Channel3, DISABLE);
+	//	flag = 1;
+	//	alma = 0;
+	//}
 	DMA2->IFCR = DMA_IFCR_CGIF3;
 }
 
