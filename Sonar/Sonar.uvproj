@@ -29,7 +29,7 @@
           <SLE66CMisc></SLE66CMisc>
           <SLE66AMisc></SLE66AMisc>
           <SLE66LinkerMisc></SLE66LinkerMisc>
-          <SFDFile>SFD\ST\STM32F30x\STM32F30x.sfr</SFDFile>
+          <SFDFile>C:\Users\Daniel\Google Drive\01_PROJECTS\03_KCONS\01_Sonar\Firmware\Sonar_app\Sonar\STM32F30x.SFR</SFDFile>
           <bCustSvd>1</bCustSvd>
           <UseEnv>0</UseEnv>
           <BinPath></BinPath>
@@ -355,7 +355,7 @@
             <uSurpInc>0</uSurpInc>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define></Define>
+              <Define>ARM_MATH_CM4</Define>
               <Undefine></Undefine>
               <IncludePath>ApplicationLayer;.\ComplexDrivers;.\InterruptDispatcher;.\MicrocontrollerAbsLayer;.\Startup;.\MicrocontrollerAbsLayer\CMSIS;.\ECUAbstraction</IncludePath>
             </VariousControls>
@@ -553,41 +553,6 @@
         <Group>
           <GroupName>MicrocontrollerAbsLayer_CMSIS_LIB</GroupName>
           <Files>
-            <File>
-              <FileName>arm_cortexM0b_math.lib</FileName>
-              <FileType>4</FileType>
-              <FilePath>./MicrocontrollerAbsLayer/CMSIS/LIB/arm_cortexM0b_math.lib</FilePath>
-            </File>
-            <File>
-              <FileName>arm_cortexM0l_math.lib</FileName>
-              <FileType>4</FileType>
-              <FilePath>./MicrocontrollerAbsLayer/CMSIS/LIB/arm_cortexM0l_math.lib</FilePath>
-            </File>
-            <File>
-              <FileName>arm_cortexM3b_math.lib</FileName>
-              <FileType>4</FileType>
-              <FilePath>./MicrocontrollerAbsLayer/CMSIS/LIB/arm_cortexM3b_math.lib</FilePath>
-            </File>
-            <File>
-              <FileName>arm_cortexM3l_math.lib</FileName>
-              <FileType>4</FileType>
-              <FilePath>./MicrocontrollerAbsLayer/CMSIS/LIB/arm_cortexM3l_math.lib</FilePath>
-            </File>
-            <File>
-              <FileName>arm_cortexM4b_math.lib</FileName>
-              <FileType>4</FileType>
-              <FilePath>./MicrocontrollerAbsLayer/CMSIS/LIB/arm_cortexM4b_math.lib</FilePath>
-            </File>
-            <File>
-              <FileName>arm_cortexM4bf_math.lib</FileName>
-              <FileType>4</FileType>
-              <FilePath>./MicrocontrollerAbsLayer/CMSIS/LIB/arm_cortexM4bf_math.lib</FilePath>
-            </File>
-            <File>
-              <FileName>arm_cortexM4l_math.lib</FileName>
-              <FileType>4</FileType>
-              <FilePath>./MicrocontrollerAbsLayer/CMSIS/LIB/arm_cortexM4l_math.lib</FilePath>
-            </File>
             <File>
               <FileName>arm_cortexM4lf_math.lib</FileName>
               <FileType>4</FileType>

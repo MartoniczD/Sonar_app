@@ -29,6 +29,7 @@
 .\uv4build\main.o: .\ComplexDrivers\CD_Delay.h
 .\uv4build\main.o: .\ComplexDrivers\CD_AnalogIn.h
 .\uv4build\main.o: .\ComplexDrivers\CD_AnalogOut.h
+.\uv4build\main.o: .\ComplexDrivers\CD_ComplementerOut.h
 .\uv4build\main.o: .\ComplexDrivers\CD_UniqueID.h
 .\uv4build\main.o: .\ComplexDrivers\CD_NVM.h
 .\uv4build\main.o: .\ComplexDrivers\CD_TimeBase.h
@@ -36,3 +37,4 @@
 .\uv4build\main.o: .\ECUAbstraction\ECUA_SerialComm.h
 .\uv4build\main.o: .\ECUAbstraction\ECUA_CurrentTr.h
 .\uv4build\main.o: .\ECUAbstraction\ECUA_VGA.h
+.\uv4build\main.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h

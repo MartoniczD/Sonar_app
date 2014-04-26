@@ -160,14 +160,19 @@ volatile uint8 flag = 0;
 
 
 void DMA2_Channel3_IRQHandler(void){
+	/*
+	if(flag == 0){
+		
+		alma++;
+	}
 	
-	//alma++;
-	//if(alma >= 8){
-	//	DAC_Cmd(DAC_Channel_1, DISABLE);
-	//	DMA_Cmd(DMA2_Channel3, DISABLE);
-	//	flag = 1;
-	//	alma = 0;
-	//}
+	if(alma >= 8 && flag == 0){
+		((GPIO_TypeDef*)LED_GPIO)->ODR |= LED_PIN;
+		//DAC_Cmd(DAC_Channel_1, DISABLE);
+		DMA_Cmd(DMA2_Channel3, DISABLE);
+		flag = 1;
+		alma = 0;
+	}*/
 	DMA2->IFCR = DMA_IFCR_CGIF3;
 }
 
@@ -178,6 +183,26 @@ void USART1_IRQHandler(void){
 
 }
 
+void TIM1_CC_IRQHandler(void)
+{
+  if (TIM_GetITStatus(TIM1, TIM_IT_CC1) != RESET)
+  {
+		if(flag == 0){
+			alma++;
+	  }
+		
+	if(alma >= 8 && flag == 0){
+		((GPIO_TypeDef*)LED_GPIO)->ODR |= LED_PIN;
+		TIM_Cmd(TIM1, DISABLE);
+
+		flag = 1;
+		alma = 0;
+	}
+		
+    TIM_ClearITPendingBit(TIM1, TIM_IT_CC1);
+    
+	} 
+}
 
 /**
   * @}

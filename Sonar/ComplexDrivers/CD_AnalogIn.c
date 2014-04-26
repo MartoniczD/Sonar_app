@@ -1,7 +1,7 @@
 #include "CD_AnalogIn.h"
 
 
-enum { ADC_HALF_BUFFER = 180 };
+enum { ADC_HALF_BUFFER = 1024 };
 volatile uint16 ADCbuf[ADC_HALF_BUFFER*2];
 volatile uint32 samples = 0;
 
@@ -68,6 +68,35 @@ static void calibrate_adc(void)
 
 }
 
+static void lTIM3_Init(){
+	
+	TIM_TimeBaseInitTypeDef  TIM_TimeBaseStructure;
+  uint16 PrescalerValue = 0;
+
+
+  /* Compute the prescaler value */
+  PrescalerValue = (uint16) ((SystemCoreClock) / 72000000) - 1;
+
+  /* TIM3 clock enable */
+  RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM3, ENABLE);
+
+  /* Time base configuration */
+  TIM_TimeBaseStructure.TIM_Period = 179;
+  TIM_TimeBaseStructure.TIM_Prescaler = 0; //->400KHz
+  TIM_TimeBaseStructure.TIM_ClockDivision = 0;
+  TIM_TimeBaseStructure.TIM_CounterMode = TIM_CounterMode_Up;
+
+  TIM_TimeBaseInit(TIM3, &TIM_TimeBaseStructure);
+
+  /* Prescaler configuration */
+  //TIM_PrescalerConfig(TIM3, PrescalerValue, TIM_PSCReloadMode_Immediate);
+  TIM_SelectOutputTrigger(TIM3, TIM_TRGOSource_Update);
+
+  TIM_Cmd(TIM3, ENABLE);
+
+	
+}
+
 void setup_adc(void)
 {
 	ADC_CommonInitTypeDef	 ADC_CommonInitStructure;
@@ -77,12 +106,12 @@ void setup_adc(void)
 	ADC_DeInit(ADC1);
 		
 	/* Configure the ADC clock */
-	//RCC_ADCCLKConfig(RCC_ADC12PLLCLK_Div6);	// 12 MHz  
-	RCC_ADCCLKConfig(RCC_ADC12PLLCLK_Div128);	//562,5khz
-		
+	RCC_ADCCLKConfig(RCC_ADC12PLLCLK_Div2);	// 12 MHz  
+			
 	/* Enable ADC1 clock */
 	RCC_AHBPeriphClockCmd(RCC_AHBPeriph_ADC12, ENABLE);
 		
+	lTIM3_Init();
 	setup_adc_gpio();
 	setup_adc_dma();
 	
@@ -101,8 +130,9 @@ void setup_adc(void)
 	ADC_StructInit(&ADC_InitStructure);
 	ADC_InitStructure.ADC_ContinuousConvMode = ADC_ContinuousConvMode_Enable;
 	ADC_InitStructure.ADC_Resolution = ADC_Resolution_12b;
-	ADC_InitStructure.ADC_ExternalTrigConvEvent = ADC_ExternalTrigConvEvent_0;         
+	ADC_InitStructure.ADC_ExternalTrigConvEvent = ADC_ExternalTrigConvEvent_11; //TIM3 TRGO         
 	ADC_InitStructure.ADC_ExternalTrigEventEdge = ADC_ExternalTrigEventEdge_None;
+   
 	ADC_InitStructure.ADC_DataAlign = ADC_DataAlign_Right;
 	ADC_InitStructure.ADC_OverrunMode = ADC_OverrunMode_Disable;   
 	ADC_InitStructure.ADC_AutoInjMode = ADC_AutoInjec_Disable;  
@@ -110,7 +140,7 @@ void setup_adc(void)
 	ADC_Init(ADC1, &ADC_InitStructure);
 
 
-  ADC_RegularChannelConfig(ADC1, ADC_Channel_4, 1, ADC_SampleTime_2Cycles5);
+  ADC_RegularChannelConfig(ADC1, ADC_Channel_4, 1, ADC_SampleTime_19Cycles5);
 	
 	/* Configures the ADC DMA */
 	ADC_DMAConfig(ADC1, ADC_DMAMode_Circular);
@@ -129,11 +159,12 @@ void setup_adc(void)
 
 	/* Start ADC1 Software Conversion */ 
 	ADC_StartConversion(ADC1);
+	//ADC_StartOfConversion(ADC1);
 }
 
 volatile int elso = 0;
 volatile int masodik = 0;
-
+volatile uint8 finished = 0;
 /* Handles DMA1_Channel1 (ADC Buffer) interrupt request */
 // void DMA1_Channel1_IRQHandler(void) __attribute__ ((section (".ccmram")));
  void DMA1_Channel1_IRQHandler(void)
@@ -142,17 +173,19 @@ volatile int masodik = 0;
 
 	if(DMA1->ISR & DMA1_IT_TC1){
 		//samples +=180;
-		elso = TIM3->CNT;
-		ptr = &ADCbuf[ADC_HALF_BUFFER];
+		//elso = TIM3->CNT;
+//		ptr = &ADCbuf[ADC_HALF_BUFFER];
+		DMA_Cmd(DMA1_Channel1, DISABLE);
 		DMA1->IFCR = DMA_IFCR_CTCIF1;
+		finished = 1;
 		
 
 	} else if(DMA1->ISR & DMA1_IT_HT1) {
 		
  		/* Half transfer - 1st half buffer has data */
 		//samples +=180;
-		TIM3->CNT = 0;
-		ptr = &ADCbuf[0];
+		//TIM3->CNT = 0;
+	//	ptr = &ADCbuf[0];
 		DMA1->IFCR = DMA_IFCR_CHTIF1;
  	}
  	else
